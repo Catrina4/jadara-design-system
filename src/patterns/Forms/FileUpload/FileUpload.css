@@ -1,0 +1,115 @@
+.jadara-file-upload {
+  width: 100%;
+}
+
+.jadara-file-upload__dropzone {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: var(--space-8);
+
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-lg);
+
+  background: var(--surface);
+
+  cursor: pointer;
+
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.jadara-file-upload__dropzone:hover {
+  border-color: var(--primary);
+  background: var(--purple-50);
+}
+
+.jadara-file-upload__icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-full);
+
+  background: var(--purple-50);
+  color: var(--primary);
+}
+
+.jadara-file-upload__label {
+  margin-top: var(--space-4);
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-file-upload__description {
+  margin-top: var(--space-1);
+
+  color: var(--text-muted);
+
+  font-size: var(--font-size-xs);
+}
+
+.jadara-file-upload__files {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  margin-top: var(--space-4);
+}
+
+.jadara-file-upload__file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--space-3) var(--space-4);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+
+  background: var(--surface);
+}
+
+.jadara-file-upload__file-name {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.jadara-file-upload__file-size {
+  margin-top: 2px;
+
+  color: var(--text-muted);
+
+  font-size: var(--font-size-xs);
+}
+
+.jadara-file-upload__file button {
+  display: grid;
+  place-items: center;
+
+  padding: 6px;
+
+  border: 0;
+  border-radius: var(--radius-sm);
+
+  background: transparent;
+  color: var(--text-muted);
+
+  cursor: pointer;
+}
+
+.jadara-file-upload__file button:hover {
+  background: var(--gray-100);
+  color: var(--error);
+}

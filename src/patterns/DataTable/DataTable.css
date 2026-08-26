@@ -1,0 +1,107 @@
+.jadara-data-table {
+
+  overflow: hidden;
+}
+
+
+.jadara-data-table__header,
+.jadara-data-table__row {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 16px;
+
+  align-items: center;
+}
+
+
+.jadara-data-table__header {
+
+  min-height: 48px;
+
+  padding:
+    0 22px;
+
+  border-bottom:
+    1px solid #ebe8f2;
+
+  background:
+    #fcfbfe;
+}
+
+
+.jadara-data-table__heading {
+
+  color: #8d899c;
+
+  font-size: 8px;
+
+  font-weight: 750;
+
+  letter-spacing: .08em;
+}
+
+
+.jadara-data-table__row {
+
+  min-height: 76px;
+
+  padding:
+    0 22px;
+
+  border-bottom:
+    1px solid #f1eff6;
+
+  background: white;
+
+  transition:
+    background .15s ease;
+}
+
+
+.jadara-data-table__row:last-child {
+
+  border-bottom: 0;
+}
+
+
+.jadara-data-table__row:hover {
+
+  background:
+    #fbf9ff;
+}
+
+
+.jadara-data-table__row--clickable {
+
+  cursor: pointer;
+}
+
+
+.jadara-data-table__cell {
+
+  min-width: 0;
+
+  color: #4e495e;
+
+  font-size: 9px;
+}
+
+
+.jadara-data-table__empty {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 180px;
+
+  color: #9995aa;
+
+  font-size: 11px;
+}

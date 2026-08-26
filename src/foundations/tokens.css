@@ -1,0 +1,190 @@
+:root {
+  /* ========================================
+     JADARA BRAND
+     ======================================== */
+
+  --purple-50: #F9F3FC;
+  --purple-100: #F1E3F7;
+  --purple-200: #E2C9EE;
+  --purple-300: #CDA3E0;
+  --purple-400: #B77ACF;
+  --purple-500: #9B4DCA;
+  --purple-600: #7C3AED;
+  --purple-700: #6D28D9;
+  --purple-800: #5B21B6;
+  --purple-900: #4C1D95;
+
+
+  /* ========================================
+     JADARA NAVY
+     ======================================== */
+
+  --navy-800: #10233F;
+  --navy-900: #0A1930;
+  --navy-950: #071426;
+
+
+  /* ========================================
+     NEUTRALS
+     ======================================== */
+
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+
+
+  /* ========================================
+     SUCCESS
+     ======================================== */
+
+  --success-50: #F0FDF4;
+  --success-100: #DCFCE7;
+  --success-500: #22C55E;
+  --success-600: #16A34A;
+  --success-700: #15803D;
+
+
+  /* ========================================
+     WARNING
+     ======================================== */
+
+  --warning-50: #FFF7ED;
+  --warning-100: #FFEDD5;
+  --warning-500: #F97316;
+  --warning-600: #EA580C;
+
+
+  /* ========================================
+     ERROR
+     ======================================== */
+
+  --error-50: #FEF2F2;
+  --error-100: #FEE2E2;
+  --error-500: #EF4444;
+  --error-600: #DC2626;
+
+
+  /* ========================================
+     INFO
+     ======================================== */
+
+  --info-50: #EFF6FF;
+  --info-100: #DBEAFE;
+  --info-500: #3B82F6;
+  --info-600: #2563EB;
+
+
+  /* ========================================
+     SEMANTIC COLORS
+     ======================================== */
+
+  --background: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-muted: #F8FAFC;
+
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+
+  --border: #E2E8F0;
+  --border-subtle: #EEF2F7;
+
+  --primary: var(--purple-600);
+  --primary-hover: var(--purple-700);
+  --primary-active: var(--purple-800);
+
+  --success: var(--success-600);
+  --warning: var(--warning-600);
+  --error: var(--error-600);
+  --info: var(--info-600);
+
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  --font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+
+  /* ========================================
+     SPACING
+     ======================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+
+  /* ========================================
+     BORDER RADIUS
+     ======================================== */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+
+  /* ========================================
+     BORDERS
+     ======================================== */
+
+  --border-width: 1px;
+
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+
+  --shadow-sm:
+    0 1px 2px rgba(15, 23, 42, 0.04);
+
+  --shadow-md:
+    0 4px 12px rgba(15, 23, 42, 0.06);
+
+  --shadow-lg:
+    0 10px 30px rgba(15, 23, 42, 0.08);
+
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+
+  --sidebar-width: 220px;
+  --topbar-height: 64px;
+  --content-max-width: 1440px;
+}

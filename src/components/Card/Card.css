@@ -1,0 +1,140 @@
+/* ============================================================
+   JADARA CARD
+============================================================ */
+
+.jadara-card {
+
+  position: relative;
+
+  border:
+    1px solid #ebe8f2;
+
+  border-radius:
+    17px;
+
+  background:
+    rgba(255,255,255,.94);
+
+  box-shadow:
+    0 3px 12px
+      rgba(36,17,72,.045);
+
+  overflow: hidden;
+
+  transition:
+
+    transform 200ms
+      cubic-bezier(.2,.8,.2,1),
+
+    box-shadow 200ms ease,
+
+    border-color 200ms ease;
+}
+
+
+/* Subtle top highlight */
+
+.jadara-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 8%;
+
+  right: 8%;
+
+  height: 1px;
+
+  background:
+    rgba(255,255,255,.95);
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.jadara-card:hover {
+
+  border-color:
+    #e2d8f5;
+
+  box-shadow:
+    0 12px 30px
+      rgba(53,19,104,.09);
+}
+
+
+/* ============================================================
+   PADDING
+============================================================ */
+
+.jadara-card--padding-none {
+
+  padding: 0;
+}
+
+
+.jadara-card--padding-small {
+
+  padding: 14px;
+}
+
+
+.jadara-card--padding-medium {
+
+  padding: 20px;
+}
+
+
+.jadara-card--padding-large {
+
+  padding: 28px;
+}
+
+
+/* ============================================================
+   INTERACTIVE CARD
+============================================================ */
+
+.jadara-card--interactive {
+
+  cursor: pointer;
+}
+
+
+.jadara-card--interactive:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+      rgba(97,37,217,.12);
+}
+
+
+.jadara-card--interactive:active {
+
+  transform:
+    translateY(-1px)
+    scale(.99);
+}
+
+
+/* ============================================================
+   FOCUS
+============================================================ */
+
+.jadara-card:focus-visible {
+
+  outline:
+    3px solid
+      rgba(116,56,237,.2);
+
+  outline-offset:
+    3px;
+}

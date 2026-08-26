@@ -1,0 +1,50 @@
+.jadara-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 25px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+.jadara-status-badge--pending {
+  background: #fff4df;
+  color: #c9820d;
+}
+
+
+.jadara-status-badge--in-review {
+  background: #eee8ff;
+  color: #7133d6;
+}
+
+
+.jadara-status-badge--approved {
+  background: #e6f8ed;
+  color: #209550;
+}
+
+
+.jadara-status-badge--rejected {
+  background: #fff0f2;
+  color: #d34c5b;
+}
+
+
+.jadara-status-badge--draft {
+  background: #f1eff5;
+  color: #777183;
+}
+
+
+.jadara-status-badge--completed {
+  background: #e9f2ff;
+  color: #3975ce;
+}

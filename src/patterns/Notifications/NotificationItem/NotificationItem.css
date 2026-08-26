@@ -1,0 +1,88 @@
+.jadara-notification-item {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+
+  padding: var(--space-4);
+
+  border: 0;
+  border-bottom: 1px solid var(--border-subtle);
+
+  background: var(--surface);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: background 150ms ease;
+}
+
+.jadara-notification-item:hover {
+  background: var(--gray-50);
+}
+
+.jadara-notification-item--unread {
+  background: var(--purple-50);
+}
+
+.jadara-notification-item__icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-full);
+
+  background: var(--surface);
+  color: var(--primary);
+}
+
+.jadara-notification-item__content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.jadara-notification-item__title {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-notification-item__description {
+  margin-top: 3px;
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.jadara-notification-item__time {
+  margin-top: var(--space-2);
+
+  color: var(--text-muted);
+
+  font-size: var(--font-size-xs);
+}
+
+.jadara-notification-item__dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  margin-top: 6px;
+
+  border-radius: var(--radius-full);
+
+  background: var(--primary);
+}

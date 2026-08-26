@@ -1,0 +1,50 @@
+.jadara-skill-card {
+  padding: var(--space-5);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  background: var(--surface);
+}
+
+.jadara-skill-card__main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.jadara-skill-card__name {
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-skill-card__domain {
+  margin-top: var(--space-1);
+
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.jadara-skill-card__verified {
+  color: var(--success);
+}
+
+.jadara-skill-card__footer {
+  margin-top: var(--space-4);
+}
+
+.jadara-skill-card__level {
+  display: inline-block;
+
+  padding: 4px 8px;
+
+  border-radius: var(--radius-full);
+
+  background: var(--purple-50);
+  color: var(--primary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}

@@ -1,0 +1,75 @@
+.jadara-form-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.jadara-form-field label {
+  color: #383244;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+.jadara-form-field label span {
+  margin-left: 3px;
+
+  color: #dc5060;
+}
+
+
+.jadara-form-field input,
+.jadara-form-field textarea,
+.jadara-form-field select {
+  width: 100%;
+
+  min-height: 43px;
+
+  padding: 0 12px;
+
+  border:
+    1px solid #e6e1ed;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #2c2739;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.jadara-form-field input:focus,
+.jadara-form-field textarea:focus,
+.jadara-form-field select:focus {
+  border-color: #8950e8;
+
+  box-shadow:
+    0 0 0 3px rgba(137, 80, 232, 0.09);
+}
+
+
+.jadara-form-field__hint {
+  color: #9b95a7;
+
+  font-size: 7px;
+}
+
+
+.jadara-form-field__error {
+  color: #d54d5c;
+
+  font-size: 7px;
+}

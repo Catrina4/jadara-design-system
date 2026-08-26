@@ -1,0 +1,379 @@
+/* ============================================================
+   JADARA BUTTON
+============================================================ */
+
+.jadara-button {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+
+    transform 150ms
+      cubic-bezier(.2,.8,.2,1),
+
+    box-shadow 150ms ease,
+
+    background 150ms ease,
+
+    border-color 150ms ease,
+
+    color 150ms ease;
+}
+
+
+/* ============================================================
+   SIZES
+============================================================ */
+
+.jadara-button--small {
+
+  min-height: 34px;
+
+  padding:
+    0 12px;
+
+  font-size: 10px;
+}
+
+
+.jadara-button--medium {
+
+  min-height: 40px;
+
+  padding:
+    0 16px;
+
+  font-size: 11px;
+}
+
+
+.jadara-button--large {
+
+  min-height: 46px;
+
+  padding:
+    0 20px;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   PRIMARY
+============================================================ */
+
+.jadara-button--primary {
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #7438ed,
+      #5d21d2
+    );
+
+  color: white;
+
+  box-shadow:
+
+    0 5px 14px
+      rgba(97,37,217,.22),
+
+    inset 0 1px 0
+      rgba(255,255,255,.2);
+}
+
+
+.jadara-button--primary:hover {
+
+  transform:
+    translateY(-2px);
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #8248f1,
+      #6428dc
+    );
+
+  box-shadow:
+
+    0 9px 22px
+      rgba(97,37,217,.3),
+
+    inset 0 1px 0
+      rgba(255,255,255,.22);
+}
+
+
+.jadara-button--primary:active {
+
+  transform:
+    translateY(1px)
+    scale(.965);
+
+  box-shadow:
+
+    0 3px 8px
+      rgba(97,37,217,.18);
+}
+
+
+/* ============================================================
+   SECONDARY
+============================================================ */
+
+.jadara-button--secondary {
+
+  background:
+    #f0e8ff;
+
+  color:
+    #5d21c8;
+
+  box-shadow:
+    0 2px 7px
+      rgba(97,37,217,.06);
+}
+
+
+.jadara-button--secondary:hover {
+
+  transform:
+    translateY(-2px);
+
+  background:
+    #e9ddff;
+
+  box-shadow:
+    0 7px 18px
+      rgba(97,37,217,.14);
+}
+
+
+.jadara-button--secondary:active {
+
+  transform:
+    translateY(1px)
+    scale(.965);
+}
+
+
+/* ============================================================
+   OUTLINE
+============================================================ */
+
+.jadara-button--outline {
+
+  border:
+    1px solid #ded9e9;
+
+  background:
+    white;
+
+  color:
+    #4f4b60;
+}
+
+
+.jadara-button--outline:hover {
+
+  transform:
+    translateY(-2px);
+
+  border-color:
+    #cbbce9;
+
+  background:
+    #faf8ff;
+
+  color:
+    #5d21c8;
+
+  box-shadow:
+    0 7px 17px
+      rgba(60,25,120,.1);
+}
+
+
+.jadara-button--outline:active {
+
+  transform:
+    translateY(1px)
+    scale(.965);
+}
+
+
+/* ============================================================
+   GHOST
+============================================================ */
+
+.jadara-button--ghost {
+
+  background:
+    transparent;
+
+  color:
+    #68647a;
+}
+
+
+.jadara-button--ghost:hover {
+
+  transform:
+    translateY(-1px);
+
+  background:
+    #f5f1ff;
+
+  color:
+    #5d21c8;
+}
+
+
+.jadara-button--ghost:active {
+
+  transform:
+    scale(.96);
+}
+
+
+/* ============================================================
+   DANGER
+============================================================ */
+
+.jadara-button--danger {
+
+  background:
+    linear-gradient(
+      135deg,
+      #e85b67,
+      #d84655
+    );
+
+  color: white;
+
+  box-shadow:
+    0 5px 14px
+      rgba(216,70,85,.2);
+}
+
+
+.jadara-button--danger:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 9px 22px
+      rgba(216,70,85,.28);
+}
+
+
+.jadara-button--danger:active {
+
+  transform:
+    translateY(1px)
+    scale(.965);
+}
+
+
+/* ============================================================
+   ICONS
+============================================================ */
+
+.jadara-button__icon {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.jadara-button:hover
+.jadara-button__icon {
+
+  transform:
+    scale(1.08);
+}
+
+
+.jadara-button:active
+.jadara-button__icon {
+
+  transform:
+    scale(.92);
+}
+
+
+/* ============================================================
+   FULL WIDTH
+============================================================ */
+
+.jadara-button--full {
+
+  width: 100%;
+}
+
+
+/* ============================================================
+   DISABLED
+============================================================ */
+
+.jadara-button:disabled {
+
+  opacity: .5;
+
+  cursor:
+    not-allowed;
+
+  transform: none !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+/* ============================================================
+   FOCUS
+============================================================ */
+
+.jadara-button:focus-visible {
+
+  outline:
+    3px solid
+      rgba(116,56,237,.22);
+
+  outline-offset:
+    3px;
+}

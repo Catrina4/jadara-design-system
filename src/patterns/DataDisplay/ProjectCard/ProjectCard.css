@@ -1,0 +1,138 @@
+.jadara-project-card {
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.jadara-project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.jadara-project-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.jadara-project-card__body {
+  padding: var(--space-6);
+}
+
+.jadara-project-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.jadara-project-card__title {
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-project-card__description {
+  margin-top: var(--space-2);
+
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.jadara-project-card__status {
+  flex-shrink: 0;
+
+  padding: 4px 8px;
+
+  border-radius: var(--radius-full);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-project-card__status--draft {
+  background: var(--gray-100);
+  color: var(--gray-600);
+}
+
+.jadara-project-card__status--submitted {
+  background: var(--info-50);
+  color: var(--info-600);
+}
+
+.jadara-project-card__status--under-review {
+  background: var(--warning-50);
+  color: var(--warning-600);
+}
+
+.jadara-project-card__status--approved {
+  background: var(--success-50);
+  color: var(--success-700);
+}
+
+.jadara-project-card__status--rejected {
+  background: var(--error-50);
+  color: var(--error-600);
+}
+
+.jadara-project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+
+  margin-top: var(--space-5);
+}
+
+.jadara-project-card__technology {
+  padding: 4px 8px;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--gray-100);
+  color: var(--gray-700);
+
+  font-size: var(--font-size-xs);
+}
+
+.jadara-project-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+
+  border-top: 1px solid var(--border-subtle);
+}
+
+.jadara-project-card__updated {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.jadara-project-card__action {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  border: 0;
+  background: transparent;
+
+  color: var(--primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}

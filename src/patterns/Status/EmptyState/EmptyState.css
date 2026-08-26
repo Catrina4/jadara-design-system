@@ -1,0 +1,70 @@
+.jadara-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 270px;
+
+  padding: 30px;
+
+  border:
+    1px dashed #ded8ea;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fcfaff
+    );
+
+  text-align: center;
+}
+
+
+.jadara-empty-state__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  margin-bottom: 15px;
+
+  border-radius: 19px;
+
+  background: #f0e7ff;
+
+  color: #7436df;
+
+  font-size: 27px;
+}
+
+
+.jadara-empty-state h2 {
+  margin: 0;
+
+  color: #292436;
+
+  font-size: 14px;
+}
+
+
+.jadara-empty-state p {
+  max-width: 330px;
+
+  margin: 7px 0 17px;
+
+  color: #928c9e;
+
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+
+.jadara-empty-state__action {
+  display: flex;
+}

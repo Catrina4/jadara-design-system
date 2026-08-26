@@ -1,0 +1,58 @@
+.jadara-evidence-card {
+  display: flex;
+  gap: var(--space-4);
+
+  padding: var(--space-5);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  background: var(--surface);
+}
+
+.jadara-evidence-card__icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-md);
+
+  background: var(--purple-50);
+  color: var(--primary);
+}
+
+.jadara-evidence-card__content {
+  min-width: 0;
+}
+
+.jadara-evidence-card__title {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-evidence-card__description {
+  margin-top: var(--space-1);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+}
+
+.jadara-evidence-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  margin-top: var(--space-3);
+
+  color: var(--primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}

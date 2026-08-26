@@ -1,0 +1,139 @@
+.jadara-stat-card {
+  padding: 18px;
+
+  border:
+    1px solid #ebe7f2;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 13px rgba(41, 17, 78, 0.035);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+
+.jadara-stat-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(48, 18, 94, 0.09);
+}
+
+
+.jadara-stat-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+
+.jadara-stat-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+}
+
+
+.jadara-stat-card__arrow {
+  color: #aaa5b5;
+
+  font-size: 17px;
+}
+
+
+.jadara-stat-card__title {
+  display: block;
+
+  color: #777183;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+.jadara-stat-card__value {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #171329;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+
+.jadara-stat-card__description {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #a09baa;
+
+  font-size: 8px;
+}
+
+
+.jadara-stat-card__trend {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #6930d8;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+.jadara-stat-card--purple
+.jadara-stat-card__icon {
+  background: #f0e7ff;
+  color: #7436e1;
+}
+
+
+.jadara-stat-card--green
+.jadara-stat-card__icon {
+  background: #e7f8ee;
+  color: #24a55c;
+}
+
+
+.jadara-stat-card--orange
+.jadara-stat-card__icon {
+  background: #fff4df;
+  color: #df9518;
+}
+
+
+.jadara-stat-card--red
+.jadara-stat-card__icon {
+  background: #fff0f2;
+  color: #db5060;
+}
+
+
+.jadara-stat-card--blue
+.jadara-stat-card__icon {
+  background: #eaf2ff;
+  color: #3877d5;
+}

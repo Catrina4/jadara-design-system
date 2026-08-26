@@ -1,0 +1,34 @@
+.jadara-section {
+  width: 100%;
+}
+
+.jadara-section__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+
+  margin-bottom: var(--space-6);
+}
+
+.jadara-section__title {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-section__description {
+  max-width: 640px;
+
+  margin-top: var(--space-2);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.jadara-section__action {
+  flex-shrink: 0;
+}

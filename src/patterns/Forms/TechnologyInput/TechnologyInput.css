@@ -1,0 +1,100 @@
+.jadara-technology-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 45px;
+
+  padding: 6px 9px;
+
+  border:
+    1px solid #e6e1ed;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.jadara-technology-input:focus-within {
+  border-color: #8950e8;
+
+  box-shadow:
+    0 0 0 3px rgba(137, 80, 232, 0.09);
+}
+
+
+.jadara-technology-input__tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+
+.jadara-technology-input__tags span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 7px;
+
+  border-radius: 7px;
+
+  background: #f0e7ff;
+
+  color: #7134d7;
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+
+.jadara-technology-input__tags button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 13px;
+  height: 13px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(112, 49, 215, 0.1);
+
+  color: #7134d7;
+
+  cursor: pointer;
+
+  font-size: 10px;
+}
+
+
+.jadara-technology-input > input {
+  flex: 1;
+
+  min-width: 130px;
+  height: 30px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #332e40;
+
+  font-family: inherit;
+
+  font-size: 8px;
+}

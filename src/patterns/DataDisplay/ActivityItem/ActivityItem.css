@@ -1,0 +1,44 @@
+.jadara-activity-item {
+  display: flex;
+  gap: var(--space-3);
+
+  padding: var(--space-4) 0;
+}
+
+.jadara-activity-item__icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-full);
+
+  background: var(--purple-50);
+  color: var(--primary);
+}
+
+.jadara-activity-item__content h3 {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.jadara-activity-item__content p {
+  margin-top: 4px;
+
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.jadara-activity-item__content span {
+  display: block;
+
+  margin-top: var(--space-1);
+
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+}

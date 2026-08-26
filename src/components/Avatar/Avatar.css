@@ -1,0 +1,35 @@
+.jadara-avatar {
+  display: flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-full);
+
+  background: var(--purple-100);
+  color: var(--purple-700);
+
+  font-weight: var(--font-weight-semibold);
+
+  object-fit: cover;
+}
+
+.jadara-avatar--sm {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+}
+
+.jadara-avatar--md {
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+}
+
+.jadara-avatar--lg {
+  width: 64px;
+  height: 64px;
+  font-size: 18px;
+}

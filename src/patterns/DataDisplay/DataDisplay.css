@@ -1,0 +1,386 @@
+.jadara-project-card,
+.jadara-skill-card,
+.jadara-profile-card,
+.jadara-evidence-card {
+  border: 1px solid #ebe7f2;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 13px rgba(41, 17, 78, 0.035);
+}
+
+
+/* Project */
+
+.jadara-project-card {
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.jadara-project-card--clickable {
+  cursor: pointer;
+}
+
+.jadara-project-card--clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(48, 18, 94, 0.09);
+}
+
+.jadara-project-card__cover {
+  height: 150px;
+  overflow: hidden;
+  background: #f1eaff;
+}
+
+.jadara-project-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jadara-project-card__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(135deg, #eee0ff, #7537df);
+
+  color: white;
+  font-size: 35px;
+}
+
+.jadara-project-card__body {
+  padding: 16px;
+}
+
+.jadara-project-card__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.jadara-project-card h3,
+.jadara-skill-card h3 {
+  margin: 0;
+
+  color: #292436;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.jadara-project-card__heading span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #9b96a7;
+  font-size: 8px;
+}
+
+.jadara-project-card p {
+  margin: 11px 0;
+
+  color: #777183;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.jadara-project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.jadara-project-card__technologies span {
+  padding: 4px 7px;
+
+  border-radius: 6px;
+
+  background: #f3edff;
+
+  color: #6e31d8;
+
+  font-size: 7px;
+  font-weight: 650;
+}
+
+.jadara-project-card small {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #a29dab;
+
+  font-size: 7px;
+}
+
+
+/* Skill */
+
+.jadara-skill-card {
+  display: flex;
+  gap: 12px;
+
+  padding: 15px;
+}
+
+.jadara-skill-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #f0e7ff;
+
+  color: #7436df;
+}
+
+.jadara-skill-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.jadara-skill-card__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.jadara-skill-card__level {
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  font-size: 7px;
+  font-weight: 750;
+}
+
+.jadara-skill-card__level--beginner {
+  background: #fff4df;
+  color: #c78310;
+}
+
+.jadara-skill-card__level--intermediate {
+  background: #eaf2ff;
+  color: #3473d0;
+}
+
+.jadara-skill-card__level--advanced {
+  background: #eee6ff;
+  color: #7133d8;
+}
+
+.jadara-skill-card__level--expert {
+  background: #e6f8ed;
+  color: #229952;
+}
+
+.jadara-skill-card p {
+  margin: 5px 0 10px;
+
+  color: #918c9d;
+
+  font-size: 8px;
+}
+
+.jadara-skill-card__progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+
+  color: #9893a4;
+
+  font-size: 7px;
+}
+
+.jadara-skill-card__progress strong {
+  color: #6d32d4;
+}
+
+.jadara-skill-card__progress-track {
+  height: 5px;
+
+  margin-top: 5px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #eeeaf5;
+}
+
+.jadara-skill-card__progress-track span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(90deg, #8d4df0, #6b2bd3);
+}
+
+
+/* Profile */
+
+.jadara-profile-card {
+  padding: 20px;
+}
+
+.jadara-profile-card__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jadara-profile-card__avatar {
+  width: 48px;
+  height: 48px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #eee4ff;
+}
+
+.jadara-profile-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jadara-profile-card h3 {
+  margin: 0;
+
+  color: #292436;
+  font-size: 13px;
+}
+
+.jadara-profile-card span {
+  color: #918c9d;
+  font-size: 8px;
+}
+
+.jadara-profile-card p {
+  margin: 14px 0 0;
+
+  color: #777183;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+
+/* Evidence */
+
+.jadara-evidence-card {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px;
+}
+
+.jadara-evidence-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+
+  border-radius: 10px;
+
+  background: #f2eaff;
+
+  color: #7436df;
+}
+
+.jadara-evidence-card__content {
+  flex: 1;
+}
+
+.jadara-evidence-card h3 {
+  margin: 0;
+
+  color: #302b3d;
+  font-size: 10px;
+}
+
+.jadara-evidence-card p {
+  margin: 4px 0 0;
+
+  color: #9993a5;
+  font-size: 8px;
+}
+
+.jadara-evidence-card__action {
+  color: #7033d8;
+  font-size: 17px;
+}
+
+
+/* Activity */
+
+.jadara-activity-item {
+  display: flex;
+  gap: 11px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #f0edf5;
+}
+
+.jadara-activity-item:last-child {
+  border-bottom: 0;
+}
+
+.jadara-activity-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 33px;
+  height: 33px;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #f0e7ff;
+
+  color: #7134d8;
+}
+
+.jadara-activity-item__content {
+  flex: 1;
+}
+
+.jadara-activity-item__content p {
+  margin: 0;
+
+  color: #4f4a5c;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.jadara-activity-item__content time {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #aaa4b4;
+
+  font-size: 7px;
+}

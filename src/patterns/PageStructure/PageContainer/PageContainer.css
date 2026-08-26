@@ -1,0 +1,24 @@
+.jadara-page-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.jadara-page-container--sm {
+  max-width: 720px;
+}
+
+
+.jadara-page-container--md {
+  max-width: 960px;
+}
+
+
+.jadara-page-container--lg {
+  max-width: 1320px;
+}
+
+
+.jadara-page-container--full {
+  max-width: none;
+}
