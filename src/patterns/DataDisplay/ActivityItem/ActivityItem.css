@@ -1,44 +1,54 @@
 .jadara-activity-item {
   display: flex;
+
   gap: var(--space-3);
 
   padding: var(--space-4) 0;
+
+  border-bottom:
+    var(--border-width)
+    solid
+    var(--divider);
 }
 
-.jadara-activity-item__icon {
-  width: 36px;
-  height: 36px;
+
+.jadara-activity-item:last-child {
+  border-bottom: 0;
+}
+
+
+.jadara-activity-item__dot {
+  width: 9px;
+  height: 9px;
+
+  margin-top: 6px;
 
   flex-shrink: 0;
 
-  display: grid;
-  place-items: center;
-
   border-radius: var(--radius-full);
 
-  background: var(--purple-50);
-  color: var(--primary);
+  background: var(--primary);
 }
 
-.jadara-activity-item__content h3 {
+
+.jadara-activity-item__content {
+  flex: 1;
+}
+
+
+.jadara-activity-item__text {
   color: var(--text-primary);
 
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.5;
 }
 
-.jadara-activity-item__content p {
+
+.jadara-activity-item__time {
   margin-top: 4px;
 
-  color: var(--text-secondary);
-  font-size: var(--font-size-xs);
-}
-
-.jadara-activity-item__content span {
-  display: block;
-
-  margin-top: var(--space-1);
-
   color: var(--text-muted);
+
   font-size: var(--font-size-xs);
 }

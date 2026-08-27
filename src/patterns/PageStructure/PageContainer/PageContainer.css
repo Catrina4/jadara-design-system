@@ -1,24 +1,29 @@
 .jadara-page-container {
+  margin-left: var(--sidebar-width);
+
+  padding:
+    calc(
+      var(--topbar-height) + var(--space-8)
+    )
+    var(--space-8)
+    var(--space-10);
+
+  min-height: 100vh;
+
+  background: var(--background);
+
+  color: var(--text-primary);
+
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+
+.jadara-page-container__inner {
   width: 100%;
+
+  max-width: var(--content-max-width);
+
   margin: 0 auto;
-}
-
-
-.jadara-page-container--sm {
-  max-width: 720px;
-}
-
-
-.jadara-page-container--md {
-  max-width: 960px;
-}
-
-
-.jadara-page-container--lg {
-  max-width: 1320px;
-}
-
-
-.jadara-page-container--full {
-  max-width: none;
 }

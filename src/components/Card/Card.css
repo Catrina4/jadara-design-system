@@ -1,140 +1,48 @@
-/* ============================================================
-   JADARA CARD
-============================================================ */
-
 .jadara-card {
+  width: 100%;
 
-  position: relative;
+  padding: var(--space-6);
+
+  background: var(--surface);
 
   border:
-    1px solid #ebe8f2;
+    var(--border-width)
+    solid
+    var(--border);
 
-  border-radius:
-    17px;
+  border-radius: var(--radius-lg);
 
-  background:
-    rgba(255,255,255,.94);
+  color: var(--text-primary);
 
-  box-shadow:
-    0 3px 12px
-      rgba(36,17,72,.045);
-
-  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 
   transition:
-
-    transform 200ms
-      cubic-bezier(.2,.8,.2,1),
-
-    box-shadow 200ms ease,
-
-    border-color 200ms ease;
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
-
-/* Subtle top highlight */
-
-.jadara-card::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: 8%;
-
-  right: 8%;
-
-  height: 1px;
-
-  background:
-    rgba(255,255,255,.95);
-
-  pointer-events: none;
-}
-
-
-/* Hover */
-
-.jadara-card:hover {
-
-  border-color:
-    #e2d8f5;
-
-  box-shadow:
-    0 12px 30px
-      rgba(53,19,104,.09);
-}
-
-
-/* ============================================================
-   PADDING
-============================================================ */
-
-.jadara-card--padding-none {
-
-  padding: 0;
-}
-
-
-.jadara-card--padding-small {
-
-  padding: 14px;
-}
-
-
-.jadara-card--padding-medium {
-
-  padding: 20px;
-}
-
-
-.jadara-card--padding-large {
-
-  padding: 28px;
-}
-
-
-/* ============================================================
-   INTERACTIVE CARD
-============================================================ */
 
 .jadara-card--interactive {
-
   cursor: pointer;
 }
 
 
 .jadara-card--interactive:hover {
+  background: var(--surface-hover);
 
-  transform:
-    translateY(-4px);
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-2px);
+}
+
+
+.jadara-card--selected {
+  border-color: var(--primary);
+
+  background: var(--surface-selected);
 
   box-shadow:
-    0 15px 35px
-      rgba(97,37,217,.12);
-}
-
-
-.jadara-card--interactive:active {
-
-  transform:
-    translateY(-1px)
-    scale(.99);
-}
-
-
-/* ============================================================
-   FOCUS
-============================================================ */
-
-.jadara-card:focus-visible {
-
-  outline:
-    3px solid
-      rgba(116,56,237,.2);
-
-  outline-offset:
-    3px;
+    0 0 0 3px var(--focus-ring);
 }

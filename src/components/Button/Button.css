@@ -1,379 +1,163 @@
-/* ============================================================
-   JADARA BUTTON
-============================================================ */
-
 .jadara-button {
-
-  position: relative;
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
-  gap: 8px;
+  gap: var(--space-2);
 
-  border: 0;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-md);
 
-  border-radius: 10px;
-
-  outline: none;
-
-  font-family: inherit;
-
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 
   cursor: pointer;
 
-  user-select: none;
-
-  -webkit-tap-highlight-color: transparent;
-
   transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 120ms ease;
 
-    transform 150ms
-      cubic-bezier(.2,.8,.2,1),
+  user-select: none;
+}
 
-    box-shadow 150ms ease,
+.jadara-button:active {
+  transform: translateY(1px) scale(0.98);
+}
 
-    background 150ms ease,
-
-    border-color 150ms ease,
-
-    color 150ms ease;
+.jadara-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
 
-/* ============================================================
+/* =========================
    SIZES
-============================================================ */
+   ========================= */
 
 .jadara-button--small {
+  min-height: 36px;
+  padding: 0 var(--space-3);
 
-  min-height: 34px;
-
-  padding:
-    0 12px;
-
-  font-size: 10px;
+  font-size: var(--font-size-sm);
 }
-
 
 .jadara-button--medium {
+  min-height: 42px;
+  padding: 0 var(--space-4);
 
-  min-height: 40px;
-
-  padding:
-    0 16px;
-
-  font-size: 11px;
+  font-size: var(--font-size-md);
 }
-
 
 .jadara-button--large {
+  min-height: 48px;
+  padding: 0 var(--space-5);
 
-  min-height: 46px;
-
-  padding:
-    0 20px;
-
-  font-size: 12px;
+  font-size: var(--font-size-lg);
 }
 
 
-/* ============================================================
+/* =========================
    PRIMARY
-============================================================ */
+   ========================= */
 
 .jadara-button--primary {
+  background: var(--primary);
+  color: var(--text-on-primary);
 
-  background:
-
-    linear-gradient(
-      135deg,
-      #7438ed,
-      #5d21d2
-    );
-
-  color: white;
-
-  box-shadow:
-
-    0 5px 14px
-      rgba(97,37,217,.22),
-
-    inset 0 1px 0
-      rgba(255,255,255,.2);
+  box-shadow: var(--shadow-sm);
 }
-
 
 .jadara-button--primary:hover {
+  background: var(--primary-hover);
 
-  transform:
-    translateY(-2px);
-
-  background:
-
-    linear-gradient(
-      135deg,
-      #8248f1,
-      #6428dc
-    );
-
-  box-shadow:
-
-    0 9px 22px
-      rgba(97,37,217,.3),
-
-    inset 0 1px 0
-      rgba(255,255,255,.22);
+  box-shadow: var(--shadow-md);
 }
-
 
 .jadara-button--primary:active {
-
-  transform:
-    translateY(1px)
-    scale(.965);
-
-  box-shadow:
-
-    0 3px 8px
-      rgba(97,37,217,.18);
+  background: var(--primary-active);
 }
 
 
-/* ============================================================
+/* =========================
    SECONDARY
-============================================================ */
+   ========================= */
 
 .jadara-button--secondary {
-
-  background:
-    #f0e8ff;
-
-  color:
-    #5d21c8;
-
-  box-shadow:
-    0 2px 7px
-      rgba(97,37,217,.06);
+  background: var(--surface-selected);
+  color: var(--primary);
 }
-
 
 .jadara-button--secondary:hover {
-
-  transform:
-    translateY(-2px);
-
-  background:
-    #e9ddff;
-
-  box-shadow:
-    0 7px 18px
-      rgba(97,37,217,.14);
+  background: var(--surface-hover);
 }
 
 
-.jadara-button--secondary:active {
-
-  transform:
-    translateY(1px)
-    scale(.965);
-}
-
-
-/* ============================================================
+/* =========================
    OUTLINE
-============================================================ */
+   ========================= */
 
 .jadara-button--outline {
+  background: transparent;
 
-  border:
-    1px solid #ded9e9;
+  border-color: var(--border);
 
-  background:
-    white;
-
-  color:
-    #4f4b60;
+  color: var(--text-primary);
 }
-
 
 .jadara-button--outline:hover {
-
-  transform:
-    translateY(-2px);
-
-  border-color:
-    #cbbce9;
-
-  background:
-    #faf8ff;
-
-  color:
-    #5d21c8;
-
-  box-shadow:
-    0 7px 17px
-      rgba(60,25,120,.1);
+  background: var(--surface-hover);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 
-.jadara-button--outline:active {
-
-  transform:
-    translateY(1px)
-    scale(.965);
-}
-
-
-/* ============================================================
+/* =========================
    GHOST
-============================================================ */
+   ========================= */
 
 .jadara-button--ghost {
-
-  background:
-    transparent;
-
-  color:
-    #68647a;
+  background: transparent;
+  color: var(--text-secondary);
 }
-
 
 .jadara-button--ghost:hover {
-
-  transform:
-    translateY(-1px);
-
-  background:
-    #f5f1ff;
-
-  color:
-    #5d21c8;
+  background: var(--surface-hover);
+  color: var(--text-primary);
 }
 
 
-.jadara-button--ghost:active {
-
-  transform:
-    scale(.96);
-}
-
-
-/* ============================================================
+/* =========================
    DANGER
-============================================================ */
+   ========================= */
 
 .jadara-button--danger {
-
-  background:
-    linear-gradient(
-      135deg,
-      #e85b67,
-      #d84655
-    );
-
-  color: white;
-
-  box-shadow:
-    0 5px 14px
-      rgba(216,70,85,.2);
+  background: var(--error);
+  color: #FFFFFF;
 }
-
 
 .jadara-button--danger:hover {
-
-  transform:
-    translateY(-2px);
-
-  box-shadow:
-    0 9px 22px
-      rgba(216,70,85,.28);
+  filter: brightness(0.92);
 }
 
 
-.jadara-button--danger:active {
-
-  transform:
-    translateY(1px)
-    scale(.965);
-}
-
-
-/* ============================================================
-   ICONS
-============================================================ */
-
-.jadara-button__icon {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  transition:
-    transform 150ms ease;
-}
-
-
-.jadara-button:hover
-.jadara-button__icon {
-
-  transform:
-    scale(1.08);
-}
-
-
-.jadara-button:active
-.jadara-button__icon {
-
-  transform:
-    scale(.92);
-}
-
-
-/* ============================================================
+/* =========================
    FULL WIDTH
-============================================================ */
+   ========================= */
 
-.jadara-button--full {
-
+.jadara-button--full-width {
   width: 100%;
 }
 
 
-/* ============================================================
-   DISABLED
-============================================================ */
+/* =========================
+   ICONS
+   ========================= */
 
-.jadara-button:disabled {
-
-  opacity: .5;
-
-  cursor:
-    not-allowed;
-
-  transform: none !important;
-
-  box-shadow:
-    none !important;
-}
-
-
-/* ============================================================
-   FOCUS
-============================================================ */
-
-.jadara-button:focus-visible {
-
-  outline:
-    3px solid
-      rgba(116,56,237,.22);
-
-  outline-offset:
-    3px;
+.jadara-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

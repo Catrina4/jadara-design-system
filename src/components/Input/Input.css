@@ -1,61 +1,70 @@
-.jadara-input-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.jadara-input-field__label {
-  color: var(--text-primary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-}
-
 .jadara-input {
   width: 100%;
-  height: 40px;
 
-  padding: 0 12px;
+  min-height: 44px;
 
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding:
+    0
+    var(--space-3);
+
+  background: var(--input-background);
+
+  border:
+    var(--border-width)
+    solid
+    var(--input-border);
+
+  border-radius: var(--radius-md);
+
+  color: var(--text-primary);
 
   outline: none;
 
-  background: white;
-  color: var(--text-primary);
-
-  font-size: var(--font-size-md);
-
   transition:
-    border-color 150ms ease,
-    box-shadow 150ms ease;
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
 }
+
 
 .jadara-input::placeholder {
-  color: var(--text-muted);
+  color: var(--input-placeholder);
 }
+
 
 .jadara-input:hover {
-  border-color: var(--gray-300);
+  border-color: var(--gray-400);
 }
+
 
 .jadara-input:focus {
-  border-color: var(--purple-500);
+  border-color: var(--primary);
 
   box-shadow:
-    0 0 0 3px var(--purple-100);
+    0 0 0 3px var(--focus-ring);
 }
+
+
+.jadara-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* Error */
 
 .jadara-input--error {
-  border-color: var(--error-500);
+  border-color: var(--error);
 }
 
-.jadara-input-field__hint {
-  font-size: var(--font-size-xs);
-  color: var(--text-muted);
+.jadara-input--error:focus {
+  box-shadow:
+    0 0 0 3px var(--error-soft);
 }
 
-.jadara-input-field__error {
-  font-size: var(--font-size-xs);
-  color: var(--error-600);
+
+/* Success */
+
+.jadara-input--success {
+  border-color: var(--success);
 }

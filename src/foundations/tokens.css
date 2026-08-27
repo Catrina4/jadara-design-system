@@ -1,7 +1,17 @@
+/* =========================================================
+   JADARA DESIGN SYSTEM — TOKENS
+   ========================================================= */
+
+
+/* =========================================================
+   BRAND COLORS
+   These do NOT change between light and dark mode.
+   ========================================================= */
+
 :root {
-  /* ========================================
-     JADARA BRAND
-     ======================================== */
+  /* -------------------------
+     JADARA PURPLE
+     ------------------------- */
 
   --purple-50: #F9F3FC;
   --purple-100: #F1E3F7;
@@ -15,18 +25,18 @@
   --purple-900: #4C1D95;
 
 
-  /* ========================================
+  /* -------------------------
      JADARA NAVY
-     ======================================== */
+     ------------------------- */
 
   --navy-800: #10233F;
   --navy-900: #0A1930;
   --navy-950: #071426;
 
 
-  /* ========================================
+  /* -------------------------
      NEUTRALS
-     ======================================== */
+     ------------------------- */
 
   --gray-50: #F8FAFC;
   --gray-100: #F1F5F9;
@@ -40,9 +50,9 @@
   --gray-900: #0F172A;
 
 
-  /* ========================================
+  /* =======================================================
      SUCCESS
-     ======================================== */
+     ======================================================= */
 
   --success-50: #F0FDF4;
   --success-100: #DCFCE7;
@@ -51,9 +61,9 @@
   --success-700: #15803D;
 
 
-  /* ========================================
+  /* =======================================================
      WARNING
-     ======================================== */
+     ======================================================= */
 
   --warning-50: #FFF7ED;
   --warning-100: #FFEDD5;
@@ -61,9 +71,9 @@
   --warning-600: #EA580C;
 
 
-  /* ========================================
+  /* =======================================================
      ERROR
-     ======================================== */
+     ======================================================= */
 
   --error-50: #FEF2F2;
   --error-100: #FEE2E2;
@@ -71,9 +81,9 @@
   --error-600: #DC2626;
 
 
-  /* ========================================
+  /* =======================================================
      INFO
-     ======================================== */
+     ======================================================= */
 
   --info-50: #EFF6FF;
   --info-100: #DBEAFE;
@@ -81,34 +91,9 @@
   --info-600: #2563EB;
 
 
-  /* ========================================
-     SEMANTIC COLORS
-     ======================================== */
-
-  --background: #FFFFFF;
-  --surface: #FFFFFF;
-  --surface-muted: #F8FAFC;
-
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
-  --text-muted: #94A3B8;
-
-  --border: #E2E8F0;
-  --border-subtle: #EEF2F7;
-
-  --primary: var(--purple-600);
-  --primary-hover: var(--purple-700);
-  --primary-active: var(--purple-800);
-
-  --success: var(--success-600);
-  --warning: var(--warning-600);
-  --error: var(--error-600);
-  --info: var(--info-600);
-
-
-  /* ========================================
+  /* =======================================================
      TYPOGRAPHY
-     ======================================== */
+     ======================================================= */
 
   --font-family:
     Inter,
@@ -133,9 +118,9 @@
   --font-weight-bold: 700;
 
 
-  /* ========================================
+  /* =======================================================
      SPACING
-     ======================================== */
+     ======================================================= */
 
   --space-1: 4px;
   --space-2: 8px;
@@ -149,9 +134,9 @@
   --space-16: 64px;
 
 
-  /* ========================================
+  /* =======================================================
      BORDER RADIUS
-     ======================================== */
+     ======================================================= */
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -159,16 +144,97 @@
   --radius-full: 9999px;
 
 
-  /* ========================================
+  /* =======================================================
      BORDERS
-     ======================================== */
+     ======================================================= */
 
   --border-width: 1px;
 
 
-  /* ========================================
-     SHADOWS
-     ======================================== */
+  /* =======================================================
+     LAYOUT
+     ======================================================= */
+
+  --sidebar-width: 220px;
+  --topbar-height: 64px;
+  --content-max-width: 1440px;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+:root,
+[data-theme="light"] {
+
+  /* Backgrounds */
+
+  --background: #FAF9FC;
+  --surface: #FFFFFF;
+  --surface-muted: #F8FAFC;
+  --surface-raised: #FFFFFF;
+
+
+  /* Text */
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+
+  /* Borders */
+
+  --border: #E2E8F0;
+  --border-subtle: #EEF2F7;
+
+
+  /* Brand */
+
+  --primary: var(--purple-600);
+  --primary-hover: var(--purple-700);
+  --primary-active: var(--purple-800);
+  --primary-soft: var(--purple-50);
+
+
+  /* Status */
+
+  --success: var(--success-600);
+  --warning: var(--warning-600);
+  --error: var(--error-600);
+  --info: var(--info-600);
+
+
+  /* Inputs */
+
+  --input-background: #FFFFFF;
+  --input-border: #CBD5E1;
+  --input-placeholder: #94A3B8;
+
+
+  /* Sidebar */
+
+  --sidebar-background: var(--navy-900);
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #B7C0D0;
+  --sidebar-hover: rgba(255, 255, 255, 0.08);
+  --sidebar-active: rgba(124, 58, 237, 0.30);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+
+
+  /* Topbar */
+
+  --topbar-background: #FFFFFF;
+  --topbar-border: #E2E8F0;
+
+
+  /* Focus */
+
+  --focus-ring: rgba(124, 58, 237, 0.25);
+
+
+  /* Shadows */
 
   --shadow-sm:
     0 1px 2px rgba(15, 23, 42, 0.04);
@@ -180,11 +246,173 @@
     0 10px 30px rgba(15, 23, 42, 0.08);
 
 
-  /* ========================================
-     LAYOUT
-     ======================================== */
 
-  --sidebar-width: 220px;
-  --topbar-height: 64px;
-  --content-max-width: 1440px;
+
+    /* Additional semantic colors */
+
+--surface-hover: #F8FAFC;
+--surface-selected: #F1E3F7;
+
+--text-on-primary: #FFFFFF;
+
+--divider: #E2E8F0;
+
+--success-soft: #F0FDF4;
+--warning-soft: #FFF7ED;
+--error-soft: #FEF2F2;
+--info-soft: #EFF6FF;
+}
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+[data-theme="dark"] {
+
+  /* Backgrounds */
+
+  --background: #0F0B16;
+  --surface: #18121F;
+  --surface-muted: #211929;
+  --surface-raised: #241C2E;
+
+
+  /* Text */
+
+  --text-primary: #F8F5FB;
+  --text-secondary: #C5BACF;
+  --text-muted: #93879D;
+  --text-inverse: #17101D;
+
+
+  /* Borders */
+
+  --border: #34283D;
+  --border-subtle: #2A2032;
+
+
+  /* Brand */
+
+  --primary: var(--purple-500);
+  --primary-hover: var(--purple-400);
+  --primary-active: var(--purple-300);
+  --primary-soft: rgba(155, 77, 202, 0.16);
+
+
+  /* Status */
+
+  --success: #4ADE80;
+  --warning: #FB923C;
+  --error: #F87171;
+  --info: #60A5FA;
+
+
+  /* Inputs */
+
+  --input-background: #211929;
+  --input-border: #3B2D46;
+  --input-placeholder: #81738B;
+
+
+  /* Sidebar */
+
+  --sidebar-background: #130B1C;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #AFA1B8;
+  --sidebar-hover: rgba(255, 255, 255, 0.07);
+  --sidebar-active: rgba(155, 77, 202, 0.24);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+
+
+  /* Topbar */
+
+  --topbar-background: #18121F;
+  --topbar-border: #34283D;
+
+
+  /* Focus */
+
+  --focus-ring: rgba(155, 77, 202, 0.35);
+
+
+  /* Shadows */
+
+  --shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.25);
+
+  --shadow-md:
+    0 4px 12px rgba(0, 0, 0, 0.30);
+
+  --shadow-lg:
+    0 10px 30px rgba(0, 0, 0, 0.40);
+
+    /* Additional semantic colors */
+
+--surface-hover: #211929;
+--surface-selected: #30203A;
+
+--text-on-primary: #FFFFFF;
+
+--divider: #34283D;
+
+--success-soft: rgba(34, 197, 94, 0.12);
+--warning-soft: rgba(249, 115, 22, 0.12);
+--error-soft: rgba(239, 68, 68, 0.12);
+--info-soft: rgba(59, 130, 246, 0.12);
+}
+
+
+/* =========================================================
+   SYSTEM PREFERENCE
+   Used only when no explicit theme is selected.
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+  :root:not([data-theme]) {
+
+    --background: #0F0B16;
+    --surface: #18121F;
+    --surface-muted: #211929;
+    --surface-raised: #241C2E;
+
+    --text-primary: #F8F5FB;
+    --text-secondary: #C5BACF;
+    --text-muted: #93879D;
+    --text-inverse: #17101D;
+
+    --border: #34283D;
+    --border-subtle: #2A2032;
+
+    --primary: var(--purple-500);
+    --primary-hover: var(--purple-400);
+    --primary-active: var(--purple-300);
+    --primary-soft: rgba(155, 77, 202, 0.16);
+
+    --input-background: #211929;
+    --input-border: #3B2D46;
+    --input-placeholder: #81738B;
+
+    --sidebar-background: #130B1C;
+    --sidebar-text: #FFFFFF;
+    --sidebar-text-muted: #AFA1B8;
+    --sidebar-hover: rgba(255, 255, 255, 0.07);
+    --sidebar-active: rgba(155, 77, 202, 0.24);
+    --sidebar-border: rgba(255, 255, 255, 0.08);
+
+    --topbar-background: #18121F;
+    --topbar-border: #34283D;
+
+    --focus-ring: rgba(155, 77, 202, 0.35);
+
+    --shadow-sm:
+      0 1px 2px rgba(0, 0, 0, 0.25);
+
+    --shadow-md:
+      0 4px 12px rgba(0, 0, 0, 0.30);
+
+    --shadow-lg:
+      0 10px 30px rgba(0, 0, 0, 0.40);
+  }
 }
