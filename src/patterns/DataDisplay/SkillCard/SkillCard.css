@@ -1,50 +1,68 @@
 .jadara-skill-card {
   padding: var(--space-5);
 
-  border: 1px solid var(--border);
+  background: var(--surface);
+
+  border:
+    var(--border-width)
+    solid
+    var(--border);
+
   border-radius: var(--radius-lg);
 
-  background: var(--surface);
+  box-shadow: var(--shadow-sm);
 }
 
-.jadara-skill-card__main {
+
+.jadara-skill-card__header {
   display: flex;
-  align-items: flex-start;
+
+  align-items: center;
+
   justify-content: space-between;
-  gap: var(--space-3);
 }
+
 
 .jadara-skill-card__name {
   color: var(--text-primary);
+
   font-size: var(--font-size-md);
+
   font-weight: var(--font-weight-semibold);
 }
+
 
 .jadara-skill-card__domain {
   margin-top: var(--space-1);
 
-  color: var(--text-muted);
-  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
 }
 
-.jadara-skill-card__verified {
-  color: var(--success);
-}
 
-.jadara-skill-card__footer {
+.jadara-skill-card__progress {
+  height: 6px;
+
   margin-top: var(--space-4);
-}
 
-.jadara-skill-card__level {
-  display: inline-block;
+  overflow: hidden;
 
-  padding: 4px 8px;
+  background: var(--surface-muted);
 
   border-radius: var(--radius-full);
+}
 
-  background: var(--purple-50);
-  color: var(--primary);
 
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+.jadara-skill-card__progress-value {
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--purple-500),
+      var(--purple-700)
+    );
+
+  border-radius: inherit;
 }

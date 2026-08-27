@@ -1,44 +1,69 @@
 .jadara-badge {
   display: inline-flex;
-  align-items: center;
 
-  min-height: 24px;
-  padding: 0 9px;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  min-height: 26px;
+
+  padding:
+    0
+    var(--space-3);
 
   border-radius: var(--radius-full);
 
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 
   white-space: nowrap;
 }
 
+
+/* Purple */
+
 .jadara-badge--purple {
-  color: var(--purple-700);
-  background: var(--purple-100);
+  background: var(--primary-soft);
+  color: var(--primary);
 }
+
+
+/* Success */
 
 .jadara-badge--success {
-  color: var(--success-700);
-  background: var(--success-100);
+  background: var(--success-soft);
+  color: var(--success);
 }
+
+
+/* Warning */
 
 .jadara-badge--warning {
-  color: var(--warning-600);
-  background: var(--warning-100);
+  background: var(--warning-soft);
+  color: var(--warning);
 }
+
+
+/* Error */
 
 .jadara-badge--error {
-  color: var(--error-600);
-  background: var(--error-100);
+  background: var(--error-soft);
+  color: var(--error);
 }
+
+
+/* Info */
 
 .jadara-badge--info {
-  color: var(--info-600);
-  background: var(--info-100);
+  background: var(--info-soft);
+  color: var(--info);
 }
 
+
+/* Neutral */
+
 .jadara-badge--neutral {
-  color: var(--gray-600);
-  background: var(--gray-100);
+  background: var(--surface-muted);
+  color: var(--text-secondary);
 }

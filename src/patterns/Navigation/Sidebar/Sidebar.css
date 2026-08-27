@@ -1,513 +1,337 @@
+/* =========================================================
+   JADARA SIDEBAR
+   ========================================================= */
+
 .jadara-sidebar {
-  position: sticky;
+  position: fixed;
+
   top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: var(--sidebar-width);
 
   display: flex;
   flex-direction: column;
 
-  width: 258px;
-  min-width: 258px;
-  height: 100vh;
-
-  padding: 22px 14px 16px;
-
-  overflow: hidden;
-
-  color: #ffffff;
+  padding: var(--space-5) var(--space-3);
 
   background:
-    radial-gradient(
-      circle at 10% 0%,
-      rgba(173, 102, 255, 0.32),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 90% 45%,
-      rgba(117, 52, 221, 0.2),
-      transparent 30%
-    ),
     linear-gradient(
-      160deg,
-      #241047 0%,
-      #32105e 45%,
-      #1d0b3b 100%
+      180deg,
+      var(--sidebar-background) 0%,
+      var(--navy-950) 100%
     );
 
-  box-shadow:
-    12px 0 35px rgba(37, 12, 76, 0.12);
+  color: var(--sidebar-text);
 
-  z-index: 20;
+  border-right:
+    var(--border-width)
+    solid
+    var(--sidebar-border);
+
+  z-index: 100;
+
+  transition:
+    background 200ms ease,
+    width 200ms ease;
 }
 
 
-/* =========================================
+/* =========================================================
    BRAND
-========================================= */
+   ========================================================= */
 
 .jadara-sidebar__brand {
   display: flex;
-  align-items: center;
-  gap: 11px;
 
-  padding: 4px 9px 26px;
+  align-items: center;
+
+  gap: var(--space-3);
+
+  padding:
+    var(--space-2)
+    var(--space-3)
+    var(--space-6);
 }
 
 
-.jadara-sidebar__brand-mark {
+.jadara-sidebar__logo {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  width: 39px;
-  height: 39px;
+  width: 38px;
+  height: 38px;
 
-  flex-shrink: 0;
-
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 
   background:
     linear-gradient(
-      145deg,
-      #ffffff,
-      #dfccff
+      135deg,
+      var(--purple-500),
+      var(--purple-700)
     );
 
-  color: #7434df;
+  color: white;
+
+  font-size: 18px;
+  font-weight: 800;
 
   box-shadow:
-    0 7px 22px rgba(13, 2, 32, 0.3);
-}
-
-
-.jadara-sidebar__default-logo {
-  font-size: 20px;
-  font-weight: 900;
-}
-
-
-.jadara-sidebar__brand-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+    0 8px 24px
+    rgba(124, 58, 237, 0.30);
 }
 
 
 .jadara-sidebar__brand-name {
-  font-size: 17px;
-  font-weight: 850;
-  letter-spacing: -0.04em;
+  font-size: var(--font-size-lg);
+
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: -0.02em;
 }
 
 
-.jadara-sidebar__brand-caption {
-  color: rgba(255, 255, 255, 0.42);
-
-  font-size: 7px;
-  font-weight: 700;
-
-  letter-spacing: 0.15em;
-}
-
-
-/* =========================================
+/* =========================================================
    NAVIGATION
-========================================= */
+   ========================================================= */
 
-.jadara-sidebar__navigation {
+.jadara-sidebar__nav {
   display: flex;
+
   flex-direction: column;
 
-  gap: 23px;
+  gap: 6px;
 
-  overflow-y: auto;
-  padding: 4px 0;
-
-  scrollbar-width: none;
-}
-
-.jadara-sidebar__navigation::-webkit-scrollbar {
-  display: none;
+  flex: 1;
 }
 
 
-.jadara-sidebar__section {
-  display: flex;
-  flex-direction: column;
+.jadara-sidebar__section-title {
+  padding:
+    var(--space-4)
+    var(--space-3)
+    var(--space-2);
 
-  gap: 7px;
-}
+  color: var(--sidebar-text-muted);
 
+  font-size: 10px;
 
-.jadara-sidebar__section-label {
-  padding: 0 13px;
+  font-weight: var(--font-weight-bold);
 
-  color: rgba(255, 255, 255, 0.32);
-
-  font-size: 7px;
-  font-weight: 800;
-
-  letter-spacing: 0.14em;
+  letter-spacing: 0.10em;
 
   text-transform: uppercase;
 }
 
 
-.jadara-sidebar__items {
-  display: flex;
-  flex-direction: column;
-
-  gap: 4px;
-}
-
-
-/* =========================================
-   NAV ITEM
-========================================= */
-
 .jadara-sidebar__item {
   position: relative;
 
   display: flex;
+
   align-items: center;
 
+  gap: var(--space-3);
+
   width: 100%;
-  min-height: 45px;
 
-  padding: 0 12px;
+  min-height: 44px;
 
-  gap: 11px;
+  padding:
+    0
+    var(--space-3);
 
   border: 0;
-  border-radius: 11px;
+
+  border-radius: var(--radius-md);
 
   background: transparent;
 
-  color: rgba(255, 255, 255, 0.58);
+  color: var(--sidebar-text-muted);
 
-  font-family: inherit;
-  font-size: 10px;
-  font-weight: 600;
+  font-size: var(--font-size-md);
+
+  font-weight: var(--font-weight-medium);
 
   text-align: left;
 
   cursor: pointer;
 
   transition:
-    transform 180ms ease,
-    color 180ms ease,
-    background 180ms ease,
-    box-shadow 180ms ease;
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 
 
 .jadara-sidebar__item:hover {
-  transform: translateX(3px);
+  background: var(--sidebar-hover);
 
-  background:
-    rgba(255, 255, 255, 0.075);
+  color: var(--sidebar-text);
 
-  color: #ffffff;
+  transform: translateX(2px);
 }
 
 
 .jadara-sidebar__item:active {
   transform:
-    translateX(3px)
-    scale(0.96);
+    translateX(2px)
+    scale(0.98);
 }
 
 
-/* ACTIVE */
+/* =========================================================
+   ACTIVE ITEM
+   ========================================================= */
 
 .jadara-sidebar__item--active {
-  transform: translateX(4px);
-
-  color: #ffffff;
-
   background:
     linear-gradient(
-      135deg,
-      rgba(154, 86, 246, 0.98),
-      rgba(105, 39, 211, 0.98)
+      90deg,
+      var(--sidebar-active),
+      rgba(124, 58, 237, 0.12)
     );
 
+  color: white;
+
   box-shadow:
-    0 10px 25px rgba(25, 5, 57, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    inset 3px 0 0 var(--purple-500),
+    0 8px 20px rgba(0, 0, 0, 0.10);
+
+  transform: translateX(2px);
 }
 
 
 .jadara-sidebar__item--active:hover {
-  transform: translateX(5px);
-
   background:
     linear-gradient(
-      135deg,
-      #a25cf9,
-      #7029df
+      90deg,
+      var(--sidebar-active),
+      rgba(124, 58, 237, 0.16)
     );
+
+  transform: translateX(3px);
 }
 
 
-.jadara-sidebar__item-icon {
-  display: flex;
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.jadara-sidebar__icon {
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
-  width: 21px;
-  min-width: 21px;
+  width: 20px;
 
-  font-size: 16px;
+  flex-shrink: 0;
 
-  transition:
-    transform 180ms ease;
-}
-
-
-.jadara-sidebar__item:hover
-.jadara-sidebar__item-icon {
-  transform: scale(1.1);
-}
-
-
-.jadara-sidebar__item-label {
-  flex: 1;
-
-  white-space: nowrap;
-}
-
-
-.jadara-sidebar__item-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 21px;
-  height: 21px;
-
-  padding: 0 5px;
-
-  border-radius: 999px;
-
-  background:
-    rgba(255, 255, 255, 0.14);
-
-  color: #ffffff;
-
-  font-size: 7px;
-  font-weight: 800;
+  opacity: 0.9;
 }
 
 
 .jadara-sidebar__item--active
-.jadara-sidebar__item-badge {
-  background:
-    rgba(255, 255, 255, 0.2);
+.jadara-sidebar__icon {
+  color: var(--purple-300);
 }
 
 
-/* Little glowing active indicator */
+/* =========================================================
+   BADGE
+   ========================================================= */
 
-.jadara-sidebar__active-glow {
-  position: absolute;
-
-  left: -14px;
-
-  width: 3px;
-  height: 24px;
-
-  border-radius:
-    0 5px 5px 0;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 0 13px rgba(255, 255, 255, 0.95);
-}
-
-
-/* =========================================
-   USER
-========================================= */
-
-.jadara-sidebar__user {
+.jadara-sidebar__badge {
   display: flex;
-  align-items: center;
 
-  gap: 9px;
-
-  margin-top: auto;
-  padding: 9px;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.09);
-
-  border-radius: 14px;
-
-  background:
-    rgba(255, 255, 255, 0.065);
-
-  backdrop-filter: blur(15px);
-}
-
-
-.jadara-sidebar__user-avatar {
-  display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 35px;
-  height: 35px;
+  min-width: 20px;
+  height: 20px;
 
-  flex-shrink: 0;
+  margin-left: auto;
 
-  overflow: hidden;
+  padding: 0 6px;
 
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 
-  background:
-    linear-gradient(
-      135deg,
-      #e2ceff,
-      #8747ee
-    );
+  background: var(--purple-600);
 
-  color: #ffffff;
+  color: white;
 
   font-size: 10px;
-  font-weight: 800;
+
+  font-weight: var(--font-weight-bold);
 }
 
 
-.jadara-sidebar__user-avatar img {
-  width: 100%;
-  height: 100%;
+/* =========================================================
+   BOTTOM USER AREA
+   ========================================================= */
 
-  object-fit: cover;
+.jadara-sidebar__footer {
+  margin-top: auto;
+
+  padding-top: var(--space-4);
+
+  border-top:
+    var(--border-width)
+    solid
+    var(--sidebar-border);
+}
+
+
+.jadara-sidebar__user {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-3);
+
+  padding: var(--space-3);
+
+  border-radius: var(--radius-md);
+
+  transition:
+    background-color 160ms ease;
+}
+
+
+.jadara-sidebar__user:hover {
+  background: var(--sidebar-hover);
 }
 
 
 .jadara-sidebar__user-info {
-  display: flex;
-  flex-direction: column;
-
   min-width: 0;
-  gap: 2px;
 }
 
 
-.jadara-sidebar__user-info strong {
+.jadara-sidebar__user-name {
   overflow: hidden;
 
-  color: #ffffff;
+  color: white;
 
-  font-size: 9px;
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-semibold);
 
   text-overflow: ellipsis;
+
   white-space: nowrap;
 }
 
 
-.jadara-sidebar__user-info span {
-  color: rgba(255, 255, 255, 0.42);
+.jadara-sidebar__user-role {
+  margin-top: 2px;
 
-  font-size: 8px;
-}
+  color: var(--sidebar-text-muted);
 
-
-.jadara-sidebar__user-menu {
-  margin-left: auto;
-
-  border: 0;
-
-  background: transparent;
-
-  color: rgba(255, 255, 255, 0.55);
-
-  cursor: pointer;
-
-  font-size: 17px;
-}
-
-
-/* =========================================
-   COLLAPSED
-========================================= */
-
-.jadara-sidebar--collapsed {
-  width: 76px;
-  min-width: 76px;
-}
-
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__brand-content,
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__item-label,
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__section-label,
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__item-badge,
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__user-info,
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__user-menu {
-  display: none;
-}
-
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__brand {
-  justify-content: center;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__item {
-  justify-content: center;
-  padding: 0;
-}
-
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__item-icon {
-  width: auto;
-}
-
-
-.jadara-sidebar--collapsed
-.jadara-sidebar__user {
-  justify-content: center;
-}
-
-
-@media (max-width: 850px) {
-  .jadara-sidebar {
-    width: 78px;
-    min-width: 78px;
-  }
-
-  .jadara-sidebar__brand-content,
-  .jadara-sidebar__item-label,
-  .jadara-sidebar__section-label,
-  .jadara-sidebar__item-badge,
-  .jadara-sidebar__user-info,
-  .jadara-sidebar__user-menu {
-    display: none;
-  }
-
-  .jadara-sidebar__brand {
-    justify-content: center;
-  }
-
-  .jadara-sidebar__item {
-    justify-content: center;
-  }
+  font-size: var(--font-size-xs);
 }

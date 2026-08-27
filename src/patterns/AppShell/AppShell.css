@@ -1,31 +1,14 @@
 .jadara-app-shell {
-  display: flex;
-
   min-height: 100vh;
 
-  background: #faf9fc;
-}
+  background: var(--background);
 
-
-.jadara-app-shell__main {
-  flex: 1;
-
-  min-width: 0;
-
-  padding: 22px 32px 50px;
+  color: var(--text-primary);
 }
 
 
 .jadara-app-shell__content {
-  width: 100%;
-  max-width: 1500px;
+  margin-left: var(--sidebar-width);
 
-  margin: 0 auto;
-}
-
-
-@media (max-width: 850px) {
-  .jadara-app-shell__main {
-    padding: 18px 20px 40px;
-  }
+  min-height: 100vh;
 }

@@ -1,20 +1,24 @@
 .jadara-technology-input {
   display: flex;
+
   flex-wrap: wrap;
+
   align-items: center;
 
-  gap: 7px;
+  gap: var(--space-2);
 
-  min-height: 45px;
+  min-height: 46px;
 
-  padding: 6px 9px;
+  padding: var(--space-2) var(--space-3);
+
+  background: var(--input-background);
 
   border:
-    1px solid #e6e1ed;
+    var(--border-width)
+    solid
+    var(--input-border);
 
-  border-radius: 10px;
-
-  background: #ffffff;
+  border-radius: var(--radius-md);
 
   transition:
     border-color 160ms ease,
@@ -23,78 +27,73 @@
 
 
 .jadara-technology-input:focus-within {
-  border-color: #8950e8;
+  border-color: var(--primary);
 
   box-shadow:
-    0 0 0 3px rgba(137, 80, 232, 0.09);
+    0 0 0 3px var(--focus-ring);
 }
 
 
-.jadara-technology-input__tags {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 5px;
-}
-
-
-.jadara-technology-input__tags span {
+.jadara-technology-input__tag {
   display: inline-flex;
+
   align-items: center;
 
-  gap: 5px;
+  gap: 6px;
 
-  padding: 5px 7px;
+  height: 28px;
 
-  border-radius: 7px;
+  padding: 0 var(--space-2);
 
-  background: #f0e7ff;
+  background: var(--primary-soft);
 
-  color: #7134d7;
+  border-radius: var(--radius-sm);
 
-  font-size: 7px;
-  font-weight: 700;
+  color: var(--primary);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
 }
 
 
-.jadara-technology-input__tags button {
-  display: flex;
+.jadara-technology-input__remove {
+  display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
 
   padding: 0;
 
   border: 0;
 
-  border-radius: 50%;
+  background: transparent;
 
-  background: rgba(112, 49, 215, 0.1);
-
-  color: #7134d7;
+  color: inherit;
 
   cursor: pointer;
-
-  font-size: 10px;
 }
 
 
-.jadara-technology-input > input {
+.jadara-technology-input__input {
   flex: 1;
 
-  min-width: 130px;
-  height: 30px;
+  min-width: 120px;
 
   border: 0;
+
   outline: 0;
 
   background: transparent;
 
-  color: #332e40;
+  color: var(--text-primary);
+}
 
-  font-family: inherit;
 
-  font-size: 8px;
+.jadara-technology-input__input::placeholder {
+  color: var(--input-placeholder);
 }
