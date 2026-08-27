@@ -188,12 +188,15 @@ export {
   type NotificationType,
 } from "./patterns/Notifications/NotificationItem/NotificationItem";
 
-
-
+// ================================
+// Theme
+// ================================
 
 export {
-  ReviewerDashboard,
-} from "./patterns/ReviewerDashboard/ReviewerDashboard";
+  ThemeProvider,
+} from "./theme/ThemeProvider";
 
-
+export {
+  ThemeToggle,
+} from "./theme/ThemeToggle";
 
