@@ -1,42 +1,55 @@
 .jadara-page-header {
   display: flex;
-
   align-items: flex-start;
-
   justify-content: space-between;
 
-  gap: var(--space-6);
+  gap: 24px;
 
-  margin-bottom: var(--space-8);
+  margin-bottom: 20px;
 }
 
+.jadara-page-header__content {
+  min-width: 0;
+}
 
 .jadara-page-header__title {
+  margin: 0;
+
   color: var(--text-primary);
 
-  font-size: var(--font-size-3xl);
+  font-size: 24px;
+  line-height: 1.25;
 
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
 
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
 }
 
-
 .jadara-page-header__description {
-  margin-top: var(--space-2);
+  margin: 5px 0 0;
 
   color: var(--text-secondary);
 
-  font-size: var(--font-size-md);
-
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.5;
 }
-
 
 .jadara-page-header__actions {
   display: flex;
-
   align-items: center;
 
-  gap: var(--space-3);
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .jadara-page-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .jadara-page-header__actions {
+    width: 100%;
+  }
 }

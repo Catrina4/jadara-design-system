@@ -1,72 +1,28 @@
 @import "./tokens.css";
 
-@import url(
-  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-);
-
-
-/* =========================================================
-   BASE
-   ========================================================= */
-
-:root {
-  font-family: var(--font-family);
-
-  font-synthesis: none;
-
-  text-rendering: optimizeLegibility;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-/* =========================================================
-   BOX MODEL
-   ========================================================= */
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-
-/* =========================================================
-   DOCUMENT
-   ========================================================= */
-
 html {
-  font-size: 16px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: var(--line-height-normal);
   background: var(--background);
   color: var(--text-primary);
-
-  transition:
-    background-color 200ms ease,
-    color 200ms ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
   margin: 0;
-
   min-width: 320px;
   min-height: 100vh;
-
   background: var(--background);
   color: var(--text-primary);
-
-  transition:
-    background-color 200ms ease,
-    color 200ms ease;
-
-  -webkit-font-smoothing: antialiased;
 }
-
-
-/* =========================================================
-   FORM ELEMENTS
-   ========================================================= */
 
 button,
 input,
@@ -75,79 +31,47 @@ select {
   font: inherit;
 }
 
-
 button {
-  cursor: pointer;
-
-  -webkit-tap-highlight-color: transparent;
+  border: 0;
 }
-
-
-button:disabled {
-  cursor: not-allowed;
-}
-
-
-/* =========================================================
-   FOCUS
-   ========================================================= */
 
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
-
-
-/* =========================================================
-   LINKS
-   ========================================================= */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-
-/* =========================================================
-   TYPOGRAPHY RESET
-   ========================================================= */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-
-/* =========================================================
-   IMAGES
-   ========================================================= */
-
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
+::selection {
+  background: var(--purple-100);
+  color: var(--purple-800);
+}
 
-/* =========================================================
-   SMOOTH THEME TRANSITIONS
-   ========================================================= */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-body,
-button,
-input,
-textarea,
-select {
-  transition:
-    background-color 200ms ease,
-    border-color 200ms ease,
-    color 200ms ease,
-    box-shadow 200ms ease;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-400);
 }

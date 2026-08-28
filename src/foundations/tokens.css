@@ -1,95 +1,95 @@
 /* =========================================================
-   JADARA DESIGN SYSTEM — TOKENS
-   ========================================================= */
-
-
-/* =========================================================
-   BRAND COLORS
-   These do NOT change between light and dark mode.
+   JADARA DESIGN SYSTEM
+   FOUNDATION TOKENS
    ========================================================= */
 
 :root {
-  /* -------------------------
-     JADARA PURPLE
-     ------------------------- */
+  /* =======================================================
+     BRAND — JADARA PURPLE
+     ======================================================= */
 
-  --purple-50: #F9F3FC;
-  --purple-100: #F1E3F7;
-  --purple-200: #E2C9EE;
-  --purple-300: #CDA3E0;
-  --purple-400: #B77ACF;
-  --purple-500: #9B4DCA;
-  --purple-600: #7C3AED;
-  --purple-700: #6D28D9;
-  --purple-800: #5B21B6;
-  --purple-900: #4C1D95;
+  --purple-50: #f9f3fc;
+  --purple-100: #f1e3f7;
+  --purple-200: #e2c9ee;
+  --purple-300: #cda3e0;
+  --purple-400: #b573d3;
+  --purple-500: #9939c6;
+  --purple-600: #752999;
+  --purple-700: #4d1b65;
+  --purple-800: #381249;
+  --purple-900: #260c32;
+  --purple-950: #190722;
 
+  /* =======================================================
+     NAVY — APPLICATION SHELL
+     ======================================================= */
 
-  /* -------------------------
-     JADARA NAVY
-     ------------------------- */
-
-  --navy-800: #10233F;
-  --navy-900: #0A1930;
+  --navy-50: #f4f7fb;
+  --navy-100: #e7edf6;
+  --navy-200: #ccd8e8;
+  --navy-300: #a9bbd2;
+  --navy-400: #7892b2;
+  --navy-500: #526f94;
+  --navy-600: #3d5879;
+  --navy-700: #304664;
+  --navy-800: #1b3150;
+  --navy-900: #0a1930;
   --navy-950: #071426;
 
-
-  /* -------------------------
+  /* =======================================================
      NEUTRALS
-     ------------------------- */
+     ======================================================= */
 
-  --gray-50: #F8FAFC;
-  --gray-100: #F1F5F9;
-  --gray-200: #E2E8F0;
-  --gray-300: #CBD5E1;
-  --gray-400: #94A3B8;
-  --gray-500: #64748B;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1E293B;
-  --gray-900: #0F172A;
-
+  --gray-50: #faf9fc;
+  --gray-100: #f6f4f8;
+  --gray-200: #ece9f0;
+  --gray-300: #ddd9e3;
+  --gray-400: #aaa4b2;
+  --gray-500: #777180;
+  --gray-600: #5d5765;
+  --gray-700: #413c48;
+  --gray-800: #292530;
+  --gray-900: #17141c;
 
   /* =======================================================
      SUCCESS
      ======================================================= */
 
-  --success-50: #F0FDF4;
-  --success-100: #DCFCE7;
-  --success-500: #22C55E;
-  --success-600: #16A34A;
-  --success-700: #15803D;
-
+  --success-50: #effbf3;
+  --success-100: #d9f4e2;
+  --success-500: #27a95a;
+  --success-600: #168c46;
+  --success-700: #117139;
 
   /* =======================================================
      WARNING
      ======================================================= */
 
-  --warning-50: #FFF7ED;
-  --warning-100: #FFEDD5;
-  --warning-500: #F97316;
-  --warning-600: #EA580C;
-
+  --warning-50: #fff8eb;
+  --warning-100: #ffedc7;
+  --warning-500: #e99a18;
+  --warning-600: #c97e08;
+  --warning-700: #a86400;
 
   /* =======================================================
      ERROR
      ======================================================= */
 
-  --error-50: #FEF2F2;
-  --error-100: #FEE2E2;
-  --error-500: #EF4444;
-  --error-600: #DC2626;
-
+  --error-50: #fff2f2;
+  --error-100: #ffdede;
+  --error-500: #e55353;
+  --error-600: #d63838;
+  --error-700: #b72b2b;
 
   /* =======================================================
      INFO
      ======================================================= */
 
-  --info-50: #EFF6FF;
-  --info-100: #DBEAFE;
-  --info-500: #3B82F6;
-  --info-600: #2563EB;
-
+  --info-50: #eff6ff;
+  --info-100: #dcecff;
+  --info-500: #4b83d8;
+  --info-600: #326bc0;
+  --info-700: #28569b;
 
   /* =======================================================
      TYPOGRAPHY
@@ -110,13 +110,16 @@
   --font-size-lg: 16px;
   --font-size-xl: 20px;
   --font-size-2xl: 24px;
-  --font-size-3xl: 32px;
+  --font-size-3xl: 30px;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-
 
   /* =======================================================
      SPACING
@@ -133,23 +136,21 @@
   --space-12: 48px;
   --space-16: 64px;
 
-
   /* =======================================================
-     BORDER RADIUS
+     RADIUS
      ======================================================= */
 
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
   --radius-full: 9999px;
-
 
   /* =======================================================
      BORDERS
      ======================================================= */
 
   --border-width: 1px;
-
 
   /* =======================================================
      LAYOUT
@@ -158,261 +159,136 @@
   --sidebar-width: 220px;
   --topbar-height: 64px;
   --content-max-width: 1440px;
-}
 
+  /* =======================================================
+     LIGHT THEME
+     ======================================================= */
 
-/* =========================================================
-   LIGHT THEME
-   ========================================================= */
+  --background: #faf9fc;
+  --surface: #ffffff;
+  --surface-muted: #f6f4f8;
+  --surface-raised: #ffffff;
+  --surface-hover: #faf8fc;
+  --surface-selected: #f5eafa;
 
-:root,
-[data-theme="light"] {
+  --text-primary: #17141c;
+  --text-secondary: #5d5765;
+  --text-muted: #777180;
+  --text-inverse: #ffffff;
 
-  /* Backgrounds */
-
-  --background: #FAF9FC;
-  --surface: #FFFFFF;
-  --surface-muted: #F8FAFC;
-  --surface-raised: #FFFFFF;
-
-
-  /* Text */
-
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
-  --text-inverse: #FFFFFF;
-
-
-  /* Borders */
-
-  --border: #E2E8F0;
-  --border-subtle: #EEF2F7;
-
-
-  /* Brand */
+  --border: #ece9f0;
+  --border-subtle: #f2eff5;
+  --divider: #ece9f0;
 
   --primary: var(--purple-600);
   --primary-hover: var(--purple-700);
   --primary-active: var(--purple-800);
   --primary-soft: var(--purple-50);
 
-
-  /* Status */
-
   --success: var(--success-600);
+  --success-soft: var(--success-50);
+
   --warning: var(--warning-600);
+  --warning-soft: var(--warning-50);
+
   --error: var(--error-600);
+  --error-soft: var(--error-50);
+
   --info: var(--info-600);
+  --info-soft: var(--info-50);
 
-
-  /* Inputs */
-
-  --input-background: #FFFFFF;
-  --input-border: #CBD5E1;
-  --input-placeholder: #94A3B8;
-
-
-  /* Sidebar */
+  --input-background: #ffffff;
+  --input-border: #d8d3df;
+  --input-placeholder: #aaa4b2;
 
   --sidebar-background: var(--navy-900);
-  --sidebar-text: #FFFFFF;
-  --sidebar-text-muted: #B7C0D0;
-  --sidebar-hover: rgba(255, 255, 255, 0.08);
-  --sidebar-active: rgba(124, 58, 237, 0.30);
+  --sidebar-text: #ffffff;
+  --sidebar-text-muted: #aebbd0;
+  --sidebar-hover: rgba(255, 255, 255, 0.06);
+  --sidebar-active: rgba(117, 41, 153, 0.32);
   --sidebar-border: rgba(255, 255, 255, 0.08);
 
+  --topbar-background: #ffffff;
+  --topbar-border: #ece9f0;
 
-  /* Topbar */
+  --focus-ring: rgba(117, 41, 153, 0.18);
 
-  --topbar-background: #FFFFFF;
-  --topbar-border: #E2E8F0;
-
-
-  /* Focus */
-
-  --focus-ring: rgba(124, 58, 237, 0.25);
-
-
-  /* Shadows */
+  --shadow-xs:
+    0 1px 2px rgba(23, 20, 28, 0.03);
 
   --shadow-sm:
-    0 1px 2px rgba(15, 23, 42, 0.04);
+    0 2px 8px rgba(23, 20, 28, 0.05);
 
   --shadow-md:
-    0 4px 12px rgba(15, 23, 42, 0.06);
+    0 6px 18px rgba(23, 20, 28, 0.07);
 
   --shadow-lg:
-    0 10px 30px rgba(15, 23, 42, 0.08);
-
-
-
-
-    /* Additional semantic colors */
-
---surface-hover: #F8FAFC;
---surface-selected: #F1E3F7;
-
---text-on-primary: #FFFFFF;
-
---divider: #E2E8F0;
-
---success-soft: #F0FDF4;
---warning-soft: #FFF7ED;
---error-soft: #FEF2F2;
---info-soft: #EFF6FF;
+    0 14px 36px rgba(23, 20, 28, 0.10);
 }
-
 
 /* =========================================================
    DARK THEME
    ========================================================= */
 
 [data-theme="dark"] {
-
-  /* Backgrounds */
-
-  --background: #0F0B16;
-  --surface: #18121F;
+  --background: #0f0b16;
+  --surface: #18121f;
   --surface-muted: #211929;
-  --surface-raised: #241C2E;
+  --surface-raised: #241c2e;
+  --surface-hover: #211929;
+  --surface-selected: #30203a;
 
+  --text-primary: #f8f5fb;
+  --text-secondary: #c5bacf;
+  --text-muted: #93879d;
+  --text-inverse: #17101d;
 
-  /* Text */
-
-  --text-primary: #F8F5FB;
-  --text-secondary: #C5BACF;
-  --text-muted: #93879D;
-  --text-inverse: #17101D;
-
-
-  /* Borders */
-
-  --border: #34283D;
-  --border-subtle: #2A2032;
-
-
-  /* Brand */
+  --border: #34283d;
+  --border-subtle: #2a2032;
+  --divider: #34283d;
 
   --primary: var(--purple-500);
   --primary-hover: var(--purple-400);
   --primary-active: var(--purple-300);
-  --primary-soft: rgba(155, 77, 202, 0.16);
+  --primary-soft: rgba(153, 57, 198, 0.16);
 
+  --success: #43c879;
+  --success-soft: rgba(39, 169, 90, 0.13);
 
-  /* Status */
+  --warning: #efaa35;
+  --warning-soft: rgba(233, 154, 24, 0.13);
 
-  --success: #4ADE80;
-  --warning: #FB923C;
-  --error: #F87171;
-  --info: #60A5FA;
+  --error: #f07171;
+  --error-soft: rgba(229, 83, 83, 0.13);
 
-
-  /* Inputs */
+  --info: #67a0e8;
+  --info-soft: rgba(75, 131, 216, 0.13);
 
   --input-background: #211929;
-  --input-border: #3B2D46;
-  --input-placeholder: #81738B;
+  --input-border: #3b2d46;
+  --input-placeholder: #81738b;
 
-
-  /* Sidebar */
-
-  --sidebar-background: #130B1C;
-  --sidebar-text: #FFFFFF;
-  --sidebar-text-muted: #AFA1B8;
-  --sidebar-hover: rgba(255, 255, 255, 0.07);
-  --sidebar-active: rgba(155, 77, 202, 0.24);
+  --sidebar-background: #071426;
+  --sidebar-text: #ffffff;
+  --sidebar-text-muted: #aebbd0;
+  --sidebar-hover: rgba(255, 255, 255, 0.06);
+  --sidebar-active: rgba(153, 57, 198, 0.25);
   --sidebar-border: rgba(255, 255, 255, 0.08);
 
+  --topbar-background: #18121f;
+  --topbar-border: #34283d;
 
-  /* Topbar */
+  --focus-ring: rgba(153, 57, 198, 0.30);
 
-  --topbar-background: #18121F;
-  --topbar-border: #34283D;
-
-
-  /* Focus */
-
-  --focus-ring: rgba(155, 77, 202, 0.35);
-
-
-  /* Shadows */
+  --shadow-xs:
+    0 1px 2px rgba(0, 0, 0, 0.20);
 
   --shadow-sm:
-    0 1px 2px rgba(0, 0, 0, 0.25);
+    0 2px 8px rgba(0, 0, 0, 0.24);
 
   --shadow-md:
-    0 4px 12px rgba(0, 0, 0, 0.30);
+    0 6px 18px rgba(0, 0, 0, 0.30);
 
   --shadow-lg:
-    0 10px 30px rgba(0, 0, 0, 0.40);
-
-    /* Additional semantic colors */
-
---surface-hover: #211929;
---surface-selected: #30203A;
-
---text-on-primary: #FFFFFF;
-
---divider: #34283D;
-
---success-soft: rgba(34, 197, 94, 0.12);
---warning-soft: rgba(249, 115, 22, 0.12);
---error-soft: rgba(239, 68, 68, 0.12);
---info-soft: rgba(59, 130, 246, 0.12);
-}
-
-
-/* =========================================================
-   SYSTEM PREFERENCE
-   Used only when no explicit theme is selected.
-   ========================================================= */
-
-@media (prefers-color-scheme: dark) {
-
-  :root:not([data-theme]) {
-
-    --background: #0F0B16;
-    --surface: #18121F;
-    --surface-muted: #211929;
-    --surface-raised: #241C2E;
-
-    --text-primary: #F8F5FB;
-    --text-secondary: #C5BACF;
-    --text-muted: #93879D;
-    --text-inverse: #17101D;
-
-    --border: #34283D;
-    --border-subtle: #2A2032;
-
-    --primary: var(--purple-500);
-    --primary-hover: var(--purple-400);
-    --primary-active: var(--purple-300);
-    --primary-soft: rgba(155, 77, 202, 0.16);
-
-    --input-background: #211929;
-    --input-border: #3B2D46;
-    --input-placeholder: #81738B;
-
-    --sidebar-background: #130B1C;
-    --sidebar-text: #FFFFFF;
-    --sidebar-text-muted: #AFA1B8;
-    --sidebar-hover: rgba(255, 255, 255, 0.07);
-    --sidebar-active: rgba(155, 77, 202, 0.24);
-    --sidebar-border: rgba(255, 255, 255, 0.08);
-
-    --topbar-background: #18121F;
-    --topbar-border: #34283D;
-
-    --focus-ring: rgba(155, 77, 202, 0.35);
-
-    --shadow-sm:
-      0 1px 2px rgba(0, 0, 0, 0.25);
-
-    --shadow-md:
-      0 4px 12px rgba(0, 0, 0, 0.30);
-
-    --shadow-lg:
-      0 10px 30px rgba(0, 0, 0, 0.40);
-  }
+    0 14px 36px rgba(0, 0, 0, 0.40);
 }

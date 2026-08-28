@@ -2,162 +2,150 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 
-  gap: var(--space-2);
+  min-width: 0;
 
-  border: var(--border-width) solid transparent;
+  border: 1px solid transparent;
   border-radius: var(--radius-md);
 
   font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  white-space: nowrap;
 
   cursor: pointer;
 
   transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    color 160ms ease,
-    box-shadow 160ms ease,
-    transform 120ms ease;
-
-  user-select: none;
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease,
+    transform 100ms ease;
 }
 
-.jadara-button:active {
-  transform: translateY(1px) scale(0.98);
+.jadara-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.jadara-button:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .jadara-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none;
 }
 
-
-/* =========================
-   SIZES
-   ========================= */
+/* Sizes */
 
 .jadara-button--small {
-  min-height: 36px;
+  min-height: 32px;
   padding: 0 var(--space-3);
-
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
 }
 
 .jadara-button--medium {
-  min-height: 42px;
+  min-height: 38px;
   padding: 0 var(--space-4);
-
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
 
 .jadara-button--large {
-  min-height: 48px;
+  min-height: 44px;
   padding: 0 var(--space-5);
-
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
 }
 
-
-/* =========================
-   PRIMARY
-   ========================= */
+/* Primary */
 
 .jadara-button--primary {
   background: var(--primary);
-  color: var(--text-on-primary);
-
-  box-shadow: var(--shadow-sm);
+  color: #ffffff;
 }
 
-.jadara-button--primary:hover {
+.jadara-button--primary:hover:not(:disabled) {
   background: var(--primary-hover);
-
-  box-shadow: var(--shadow-md);
 }
 
-.jadara-button--primary:active {
+.jadara-button--primary:active:not(:disabled) {
   background: var(--primary-active);
 }
 
-
-/* =========================
-   SECONDARY
-   ========================= */
+/* Secondary */
 
 .jadara-button--secondary {
-  background: var(--surface-selected);
-  color: var(--primary);
+  background: var(--purple-50);
+  color: var(--purple-700);
+  border-color: var(--purple-100);
 }
 
-.jadara-button--secondary:hover {
-  background: var(--surface-hover);
+.jadara-button--secondary:hover:not(:disabled) {
+  background: var(--purple-100);
 }
 
-
-/* =========================
-   OUTLINE
-   ========================= */
+/* Outline */
 
 .jadara-button--outline {
-  background: transparent;
-
-  border-color: var(--border);
-
-  color: var(--text-primary);
+  background: #ffffff;
+  color: var(--purple-700);
+  border-color: var(--purple-200);
 }
 
-.jadara-button--outline:hover {
-  background: var(--surface-hover);
-  border-color: var(--primary);
-  color: var(--primary);
+.jadara-button--outline:hover:not(:disabled) {
+  background: var(--purple-50);
+  border-color: var(--purple-300);
 }
 
-
-/* =========================
-   GHOST
-   ========================= */
+/* Ghost */
 
 .jadara-button--ghost {
   background: transparent;
   color: var(--text-secondary);
 }
 
-.jadara-button--ghost:hover {
+.jadara-button--ghost:hover:not(:disabled) {
   background: var(--surface-hover);
   color: var(--text-primary);
 }
 
+/* Success */
 
-/* =========================
-   DANGER
-   ========================= */
+.jadara-button--success {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.jadara-button--success:hover:not(:disabled) {
+  background: var(--success-700);
+}
+
+/* Danger */
 
 .jadara-button--danger {
   background: var(--error);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.jadara-button--danger:hover {
-  filter: brightness(0.92);
+.jadara-button--danger:hover:not(:disabled) {
+  background: var(--error-700);
 }
 
-
-/* =========================
-   FULL WIDTH
-   ========================= */
-
-.jadara-button--full-width {
-  width: 100%;
-}
-
-
-/* =========================
-   ICONS
-   ========================= */
+/* Icon */
 
 .jadara-button__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.jadara-button__icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Full width */
+
+.jadara-button--full {
+  width: 100%;
 }

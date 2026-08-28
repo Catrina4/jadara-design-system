@@ -1,43 +1,9 @@
-// Foundations
 import "./foundations/globals.css";
 
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
 
-
-// ================================
-// Patterns
-// ================================
-
-export {
-  AppShell,
-  type AppShellProps,
-} from "./patterns/AppShell/AppShell";
-
-export {
-  Sidebar,
-  type SidebarProps,
-} from "./patterns/Navigation/Sidebar/Sidebar";
-
-export {
-  Topbar,
-  type TopbarProps,
-} from "./patterns/Navigation/Topbar/Topbar";
-
-export {
-  PageContainer,
-  type PageContainerProps,
-} from "./patterns/PageStructure/PageContainer/PageContainer";
-
-export {
-  PageHeader,
-  type PageHeaderProps,
-} from "./patterns/PageStructure/PageHeader/PageHeader";
-
-export {
-  StatCard,
-  type StatCardProps,
-} from "./patterns/DataDisplay/StatCard/StatCard";
-
-// Components
 export {
   Button,
   type ButtonProps,
@@ -80,12 +46,75 @@ export {
   Divider,
 } from "./components/Divider/Divider";
 
+/* =========================================================
+   NEW CORE COMPONENTS
+   ========================================================= */
 
+export {
+  SearchField,
+  type SearchFieldProps,
+} from "./components/SearchField/SearchField";
 
+export {
+  Select,
+  type SelectProps,
+  type SelectOption,
+} from "./components/Select/Select";
 
-// ================================
-// Data Display Patterns
-// ================================
+export {
+  Modal,
+  type ModalProps,
+} from "./components/Modal/Modal";
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+export {
+  AppShell,
+  type AppShellProps,
+} from "./patterns/AppShell/AppShell";
+
+export {
+  Sidebar,
+  type SidebarProps,
+  type SidebarItem,
+  type SidebarSection,
+  type SidebarUser,
+} from "./patterns/Navigation/Sidebar/Sidebar";
+
+export {
+  Topbar,
+  type TopbarProps,
+} from "./patterns/Navigation/Topbar/Topbar";
+
+/* =========================================================
+   PAGE STRUCTURE
+   ========================================================= */
+
+export {
+  PageContainer,
+  type PageContainerProps,
+} from "./patterns/PageStructure/PageContainer/PageContainer";
+
+export {
+  PageHeader,
+  type PageHeaderProps,
+} from "./patterns/PageStructure/PageHeader/PageHeader";
+
+export {
+  Section,
+  type SectionProps,
+} from "./patterns/PageStructure/Section/Section";
+
+/* =========================================================
+   DATA DISPLAY
+   ========================================================= */
+
+export {
+  StatCard,
+  type StatCardProps,
+} from "./patterns/DataDisplay/StatCard/StatCard";
 
 export {
   ProjectCard,
@@ -113,9 +142,15 @@ export {
   type ActivityItemProps,
 } from "./patterns/DataDisplay/ActivityItem/ActivityItem";
 
-// ================================
-// Status Patterns
-// ================================
+export {
+  DataTable,
+  type DataTableProps,
+  type DataTableColumn,
+} from "./patterns/DataTable/DataTable";
+
+/* =========================================================
+   STATUS
+   ========================================================= */
 
 export {
   StatusBadge,
@@ -134,9 +169,15 @@ export {
   type EmptyStateProps,
 } from "./patterns/Status/EmptyState/EmptyState";
 
-// ================================
-// Form Patterns
-// ================================
+export {
+  Alert,
+  type AlertProps,
+  type AlertVariant,
+} from "./patterns/Status/Alert/Alert";
+
+/* =========================================================
+   FORMS
+   ========================================================= */
 
 export {
   FormField,
@@ -148,39 +189,14 @@ export {
   type TechnologyInputProps,
 } from "./patterns/Forms/TechnologyInput/TechnologyInput";
 
-
-
-// ================================
-// Page Structure
-// ================================
-
-export {
-  Section,
-  type SectionProps,
-} from "./patterns/PageStructure/Section/Section";
-
-// ================================
-// Forms
-// ================================
-
 export {
   FileUpload,
   type FileUploadProps,
 } from "./patterns/Forms/FileUpload/FileUpload";
 
-// ================================
-// Status
-// ================================
-
-export {
-  Alert,
-  type AlertProps,
-  type AlertVariant,
-} from "./patterns/Status/Alert/Alert";
-
-// ================================
-// Notifications
-// ================================
+/* =========================================================
+   NOTIFICATIONS
+   ========================================================= */
 
 export {
   NotificationItem,
@@ -188,15 +204,16 @@ export {
   type NotificationType,
 } from "./patterns/Notifications/NotificationItem/NotificationItem";
 
-// ================================
-// Theme
-// ================================
+/* =========================================================
+   THEME
+   ========================================================= */
 
 export {
   ThemeProvider,
+  useTheme,
+  type Theme,
 } from "./theme/ThemeProvider";
 
 export {
   ThemeToggle,
 } from "./theme/ThemeToggle";
-

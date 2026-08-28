@@ -1,0 +1,76 @@
+.jadara-search-field {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 38px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.jadara-search-field:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.jadara-search-field__icon {
+  margin-left: 12px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.jadara-search-field input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 36px 0 9px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+}
+
+.jadara-search-field input::placeholder {
+  color: var(--text-muted);
+}
+
+.jadara-search-field__clear {
+  position: absolute;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+
+  border-radius: 6px;
+
+  background: transparent;
+  color: var(--text-muted);
+
+  cursor: pointer;
+}
+
+.jadara-search-field__clear:hover {
+  background: var(--surface-muted);
+  color: var(--text-primary);
+}

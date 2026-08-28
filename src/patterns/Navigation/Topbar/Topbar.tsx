@@ -1,5 +1,12 @@
-import { useState } from "react";
-import type { ReactNode } from "react";
+import {
+  Bell,
+  Menu,
+  Search,
+} from "lucide-react";
+
+import type {
+  ReactNode,
+} from "react";
 
 import "./Topbar.css";
 
@@ -22,8 +29,6 @@ export function Topbar({
   actions,
   user,
 }: TopbarProps) {
-  const [search, setSearch] = useState("");
-
   return (
     <header className="jadara-topbar">
       <div className="jadara-topbar__left">
@@ -34,23 +39,21 @@ export function Topbar({
             onClick={onMenuClick}
             aria-label="Open navigation"
           >
-            ☰
+            <Menu size={18} />
           </button>
         )}
 
         <div className="jadara-topbar__search">
-          <span>⌕</span>
+          <Search size={14} />
 
           <input
-            value={search}
-            onChange={(event) => {
-              setSearch(event.target.value);
-              onSearch?.(event.target.value);
-            }}
-            placeholder="Search anything..."
+            placeholder="Search for talents, skills, or projects..."
+            onChange={(event) =>
+              onSearch?.(
+                event.target.value
+              )
+            }
           />
-
-          <kbd>⌘K</kbd>
         </div>
       </div>
 
@@ -59,12 +62,13 @@ export function Topbar({
 
         <button
           type="button"
-          className="jadara-topbar__notification"
+          className="jadara-topbar__icon-button"
           onClick={onNotificationClick}
           aria-label="Notifications"
         >
-          ♧
-          <span>3</span>
+          <Bell size={16} />
+
+          <span className="jadara-topbar__notification-dot" />
         </button>
 
         {user && (
@@ -72,23 +76,34 @@ export function Topbar({
             type="button"
             className="jadara-topbar__user"
           >
-            <div className="jadara-topbar__avatar">
+            <span className="jadara-topbar__avatar">
               {user.avatar ? (
-                <img src={user.avatar} alt={user.name} />
+                <img
+                  src={user.avatar}
+                  alt={user.name}
+                />
               ) : (
-                user.name.charAt(0).toUpperCase()
+                user.name
+                  .charAt(0)
+                  .toUpperCase()
               )}
-            </div>
+            </span>
 
-            <div className="jadara-topbar__user-info">
-              <strong>{user.name}</strong>
+            <span className="jadara-topbar__user-copy">
+              <strong>
+                {user.name}
+              </strong>
 
               {user.role && (
-                <span>{user.role}</span>
+                <span>
+                  {user.role}
+                </span>
               )}
-            </div>
+            </span>
 
-            <span>⌄</span>
+            <span className="jadara-topbar__chevron">
+              ⌄
+            </span>
           </button>
         )}
       </div>
