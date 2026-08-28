@@ -11,9 +11,13 @@ export default defineConfig({
     react(),
 
     dts({
-      include: ["src"],
+      entryRoot: "src",
+      include: ["src/index.ts"],
+      outDir: "dist",
       insertTypesEntry: true,
-      outDirs: "dist",
+      rollupTypes: false,
+      copyDtsFiles: false,
+      tsconfigPath: "./tsconfig.library.json",
     }),
   ],
 
