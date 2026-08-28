@@ -1,107 +1,91 @@
 .jadara-data-table {
-
   overflow: hidden;
-}
 
+  padding: 0 !important;
+}
 
 .jadara-data-table__header,
 .jadara-data-table__row {
-
   display: grid;
 
   grid-template-columns:
-    repeat(6, minmax(0, 1fr));
-
-  gap: 16px;
+    repeat(
+      var(--jadara-table-columns, 1fr),
+      minmax(0, 1fr)
+    );
 
   align-items: center;
 }
 
-
 .jadara-data-table__header {
+  min-height: 42px;
 
-  min-height: 48px;
+  padding: 0 20px;
 
-  padding:
-    0 22px;
+  background: var(--gray-50);
 
   border-bottom:
-    1px solid #ebe8f2;
-
-  background:
-    #fcfbfe;
+    1px solid
+    var(--border);
 }
-
 
 .jadara-data-table__heading {
+  color: var(--text-muted);
 
-  color: #8d899c;
+  font-size: 10px;
+  font-weight: 700;
 
-  font-size: 8px;
-
-  font-weight: 750;
-
-  letter-spacing: .08em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
+.jadara-data-table__body {
+  width: 100%;
+}
 
 .jadara-data-table__row {
+  min-height: 64px;
 
-  min-height: 76px;
-
-  padding:
-    0 22px;
+  padding: 0 20px;
 
   border-bottom:
-    1px solid #f1eff6;
+    1px solid
+    var(--border-subtle);
 
-  background: white;
+  background: var(--surface);
 
   transition:
-    background .15s ease;
+    background-color 150ms ease;
 }
 
-
 .jadara-data-table__row:last-child {
-
   border-bottom: 0;
 }
 
-
 .jadara-data-table__row:hover {
-
-  background:
-    #fbf9ff;
+  background: var(--surface-hover);
 }
 
-
 .jadara-data-table__row--clickable {
-
   cursor: pointer;
 }
 
-
 .jadara-data-table__cell {
-
   min-width: 0;
 
-  color: #4e495e;
+  color: var(--text-secondary);
 
-  font-size: 9px;
+  font-size: 12px;
 }
 
-
 .jadara-data-table__empty {
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   min-height: 180px;
 
-  color: #9995aa;
+  color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 12px;
 }

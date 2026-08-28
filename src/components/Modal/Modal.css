@@ -1,0 +1,69 @@
+.jadara-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  min-height: 22px;
+
+  padding: 0 8px;
+
+  border-radius: var(--radius-full);
+
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+
+  white-space: nowrap;
+}
+
+.jadara-status-badge::before {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+/* Pending */
+
+.jadara-status-badge--pending {
+  background: var(--warning-soft);
+  color: var(--warning-700);
+}
+
+/* In review */
+
+.jadara-status-badge--in-review {
+  background: var(--warning-soft);
+  color: var(--warning-700);
+}
+
+/* Approved */
+
+.jadara-status-badge--approved {
+  background: var(--success-soft);
+  color: var(--success-700);
+}
+
+/* Verified */
+
+.jadara-status-badge--completed {
+  background: var(--success-soft);
+  color: var(--success-700);
+}
+
+/* Rejected */
+
+.jadara-status-badge--rejected {
+  background: var(--error-soft);
+  color: var(--error-700);
+}
+
+/* Draft */
+
+.jadara-status-badge--draft {
+  background: var(--gray-100);
+  color: var(--gray-600);
+}

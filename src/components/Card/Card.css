@@ -1,48 +1,40 @@
 .jadara-card {
   width: 100%;
 
-  padding: var(--space-6);
-
   background: var(--surface);
 
-  border:
-    var(--border-width)
-    solid
-    var(--border);
+  border: 1px solid var(--border);
 
   border-radius: var(--radius-lg);
 
   color: var(--text-primary);
 
-  box-shadow: var(--shadow-sm);
-
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+  box-shadow: none;
 }
 
+.jadara-card--padding-sm {
+  padding: var(--space-4);
+}
+
+.jadara-card--padding-md {
+  padding: var(--space-5);
+}
+
+.jadara-card--padding-lg {
+  padding: var(--space-6);
+}
 
 .jadara-card--interactive {
   cursor: pointer;
-}
 
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
 
 .jadara-card--interactive:hover {
-  background: var(--surface-hover);
-
-  box-shadow: var(--shadow-md);
-
-  transform: translateY(-2px);
-}
-
-
-.jadara-card--selected {
-  border-color: var(--primary);
-
-  background: var(--surface-selected);
-
-  box-shadow:
-    0 0 0 3px var(--focus-ring);
+  border-color: var(--purple-200);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
 }
