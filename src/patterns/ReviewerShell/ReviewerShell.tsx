@@ -1,16 +1,13 @@
 import React from "react";
+
 import {
   LayoutDashboard,
   ClipboardCheck,
   FolderCheck,
   BarChart3,
-  MessageSquare,
-  CalendarDays,
   User,
   Settings,
   LogOut,
-  Search,
-  Bell,
 } from "lucide-react";
 
 import "./ReviewerShell.css";
@@ -20,8 +17,6 @@ export type ReviewerPage =
   | "pending"
   | "reviewed"
   | "statistics"
-  | "messages"
-  | "calendar"
   | "profile"
   | "settings";
 
@@ -34,34 +29,32 @@ export interface ReviewerShellProps {
   reviewerInitials?: string;
 
   pendingCount?: number;
-  unreadMessages?: number;
 
   onNavigate?: (page: ReviewerPage) => void;
   onLogout?: () => void;
-
-  onSearch?: (value: string) => void;
-  onNotifications?: () => void;
 }
 
 interface NavigationItem {
   id: ReviewerPage;
   label: string;
-  icon: React.ComponentType<{ size?: number; strokeWidth?: number }>;
+  icon: React.ComponentType<{
+    size?: number;
+    strokeWidth?: number;
+  }>;
   badge?: number;
 }
 
-export const ReviewerShell: React.FC<ReviewerShellProps> = ({
+export const ReviewerShell: React.FC<
+  ReviewerShellProps
+> = ({
   activePage = "dashboard",
   children,
   reviewerName = "Catrina Reviewer",
-  reviewerRole = "Expert Reviewer",
+  reviewerRole = "Reviewer",
   reviewerInitials = "CR",
   pendingCount = 12,
-  unreadMessages = 3,
   onNavigate,
   onLogout,
-  onSearch,
-  onNotifications,
 }) => {
   const primaryNavigation: NavigationItem[] = [
     {
@@ -85,17 +78,6 @@ export const ReviewerShell: React.FC<ReviewerShellProps> = ({
       label: "My Statistics",
       icon: BarChart3,
     },
-    {
-      id: "messages",
-      label: "Messages",
-      icon: MessageSquare,
-      badge: unreadMessages,
-    },
-    {
-      id: "calendar",
-      label: "Calendar",
-      icon: CalendarDays,
-    },
   ];
 
   const secondaryNavigation: NavigationItem[] = [
@@ -111,15 +93,21 @@ export const ReviewerShell: React.FC<ReviewerShellProps> = ({
     },
   ];
 
-  const handleNavigation = (page: ReviewerPage) => {
+  const handleNavigation = (
+    page: ReviewerPage,
+  ) => {
     onNavigate?.(page);
   };
 
   return (
     <div className="reviewer-shell">
       <aside className="reviewer-sidebar">
+        {/* Brand */}
+
         <div className="reviewer-sidebar__brand">
-          <div className="reviewer-sidebar__logo">J</div>
+          <div className="reviewer-sidebar__logo">
+            J
+          </div>
 
           <div>
             <div className="reviewer-sidebar__brand-name">
@@ -132,77 +120,114 @@ export const ReviewerShell: React.FC<ReviewerShellProps> = ({
           </div>
         </div>
 
+        {/* Navigation */}
+
         <nav className="reviewer-sidebar__navigation">
           <div className="reviewer-sidebar__section-label">
             WORKSPACE
           </div>
 
-          {primaryNavigation.map((item) => {
-            const Icon = item.icon;
-            const isActive = activePage === item.id;
+          {primaryNavigation.map(
+            (item) => {
+              const Icon = item.icon;
 
-            return (
-              <button
-                key={item.id}
-                type="button"
-                className={`reviewer-nav-item ${
-                  isActive ? "reviewer-nav-item--active" : ""
-                }`}
-                onClick={() => handleNavigation(item.id)}
-              >
-                <Icon size={19} strokeWidth={1.8} />
+              const isActive =
+                activePage === item.id;
 
-                <span className="reviewer-nav-item__label">
-                  {item.label}
-                </span>
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  className={`reviewer-nav-item ${
+                    isActive
+                      ? "reviewer-nav-item--active"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    handleNavigation(
+                      item.id,
+                    )
+                  }
+                >
+                  <Icon
+                    size={19}
+                    strokeWidth={1.8}
+                  />
 
-                {item.badge !== undefined && item.badge > 0 && (
-                  <span className="reviewer-nav-item__badge">
-                    {item.badge}
+                  <span className="reviewer-nav-item__label">
+                    {item.label}
                   </span>
-                )}
-              </button>
-            );
-          })}
+
+                  {item.badge !==
+                    undefined &&
+                    item.badge > 0 && (
+                      <span className="reviewer-nav-item__badge">
+                        {item.badge}
+                      </span>
+                    )}
+                </button>
+              );
+            },
+          )}
 
           <div className="reviewer-sidebar__section-label reviewer-sidebar__section-label--secondary">
             ACCOUNT
           </div>
 
-          {secondaryNavigation.map((item) => {
-            const Icon = item.icon;
-            const isActive = activePage === item.id;
+          {secondaryNavigation.map(
+            (item) => {
+              const Icon = item.icon;
 
-            return (
-              <button
-                key={item.id}
-                type="button"
-                className={`reviewer-nav-item ${
-                  isActive ? "reviewer-nav-item--active" : ""
-                }`}
-                onClick={() => handleNavigation(item.id)}
-              >
-                <Icon size={19} strokeWidth={1.8} />
+              const isActive =
+                activePage === item.id;
 
-                <span className="reviewer-nav-item__label">
-                  {item.label}
-                </span>
-              </button>
-            );
-          })}
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  className={`reviewer-nav-item ${
+                    isActive
+                      ? "reviewer-nav-item--active"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    handleNavigation(
+                      item.id,
+                    )
+                  }
+                >
+                  <Icon
+                    size={19}
+                    strokeWidth={1.8}
+                  />
+
+                  <span className="reviewer-nav-item__label">
+                    {item.label}
+                  </span>
+                </button>
+              );
+            },
+          )}
+
+          {/* Logout */}
 
           <button
             type="button"
             className="reviewer-nav-item reviewer-nav-item--logout"
             onClick={onLogout}
           >
-            <LogOut size={19} strokeWidth={1.8} />
+            <LogOut
+              size={19}
+              strokeWidth={1.8}
+            />
 
             <span className="reviewer-nav-item__label">
               Log out
             </span>
           </button>
         </nav>
+
+        {/* Reviewer */}
 
         <div className="reviewer-sidebar__reviewer">
           <div className="reviewer-sidebar__avatar">
@@ -221,29 +246,13 @@ export const ReviewerShell: React.FC<ReviewerShellProps> = ({
         </div>
       </aside>
 
+      {/* Main */}
+
       <main className="reviewer-main">
         <header className="reviewer-topbar">
-          <div className="reviewer-topbar__search">
-            <Search size={18} strokeWidth={1.8} />
-
-            <input
-              type="search"
-              placeholder="Search..."
-              aria-label="Search"
-              onChange={(event) => onSearch?.(event.target.value)}
-            />
+          <div className="reviewer-topbar__title">
+            JADARA Reviewer Portal
           </div>
-
-          <button
-            type="button"
-            className="reviewer-topbar__notification"
-            aria-label="Notifications"
-            onClick={onNotifications}
-          >
-            <Bell size={20} strokeWidth={1.8} />
-
-            <span className="reviewer-topbar__notification-dot" />
-          </button>
 
           <div className="reviewer-topbar__profile">
             <div className="reviewer-topbar__avatar">
